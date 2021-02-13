@@ -1,0 +1,1274 @@
+{{ header }}{{ column_left }}
+<div id="content">
+    <div class="page-header">
+        <div class="container-fluid">
+            <div class="pull-right">
+                <button type="submit" form="form-shipping" data-toggle="tooltip" title="{{ save }}"
+                        class="btn btn-primary"><i class="fa fa-save"></i></button>
+                <a href="{{ cancel }}" data-toggle="tooltip" title="{{ cancel }}" class="btn btn-default"><i
+                        class="fa fa-reply"></i></a>
+            </div>
+            <h1>{{ heading_title }}</h1>
+            <ul class="breadcrumb">
+                {% for breadcrumb in breadcrumbs %}
+                    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="container-fluid">
+        {% for error in errors %}
+            <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> {{ error }}
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        {% endfor %}
+        <form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-shipping"
+              class="form-horizontal">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ access_configuration }}</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label" for="input-status">{{ enabled }}</label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_status" id="input-status" class="form-control">
+                                {% if shipping_enviaya_status %}
+                                    <option value="1" selected="selected">{{ yes }}</option>
+                                    <option value="0">{{ no }}</option>
+                                {% else %}
+                                    <option value="1">{{ yes }}</option>
+                                    <option value="0" selected="selected">{{ no }}</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label" for="input-sort-order">{{ sort_order }}</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="shipping_enviaya_sort_order"
+                                   value="{{ shipping_enviaya_sort_order }}" id="input-sort-order"
+                                   class="form-control"/>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>{{ api_key_configuration }}</h4>
+
+                    <div class="form-group" style="border:none;" id="apikey-group">
+                        <label class="col-sm-2 control-label" for="input-apikey"><span data-toggle="tooltip"
+                                                                                       title="{{ api_key_help }}">{{ api_key }}</span></label>
+                        <div class="col-sm-10">
+                            <input type="text" name="shipping_enviaya_apikey" value="{{ shipping_enviaya_apikey }}"
+                                   id="input-apikey" class="form-control"/>
+                            <span data-toggle="comment" title="{{ help_apikey }}">{{ comment_apikey }}</span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;" id="test-apikey-group">
+                        <label class="col-sm-2 control-label" for="input-test-apikey"><span data-toggle="tooltip"
+                                                                                            title="{{ api_key_help }}">{{ test_api_key }}</span></label>
+                        <div class="col-sm-10">
+                            <input type="text" name="shipping_enviaya_test_apikey"
+                                   value="{{ shipping_enviaya_test_apikey }}" id="input-test-apikey"
+                                   class="form-control"/>
+                            <span data-toggle="comment" title="{{ help_test_apikey }}">{{ comment_test_apikey }}</span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label" for="input-test-mode"><span data-toggle="tooltip"
+                                                                                          title="{{ test_mode_help }}">{{ enable_test_mode }}</span></label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_test_mode" id="input-test-mode" class="form-control">
+                                {% if shipping_enviaya_test_mode %}
+                                    <option value="1" selected="selected">{{ yes }}</option>
+                                    <option value="0">{{ no }}</option>
+                                {% else %}
+                                    <option value="1">{{ yes }}</option>
+                                    <option value="0" selected="selected">{{ no }}</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>{{ billing_account }}</h4>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label" for="input-enviaya-account"><span data-toggle="tooltip"
+                                                                                                title="{{ billing_account_help }}">{{ billing_account }}</span></label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_account" id="input-enviaya-account" class="form-control">
+                                {% if enviaya_accounts|length != 1 %}
+                                    <option value="" disabled="disabled"
+                                            selected="selected">{{ select_account }}</option>
+                                {% endif %}
+                                {% for account in enviaya_accounts %}
+                                    {% if account.value == shipping_enviaya_account %}
+                                        <option value="{{ account.value }}"
+                                                selected="selected">{{ account.label }}</option>
+                                    {% else %}
+                                        <option value="{{ account.value }}">{{ account.label }}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                function ajaxAccount(api_key) {
+                    $.ajax({
+                        url: 'https://enviaya.com.mx/api/v1/get_accounts?api_key=' + api_key,
+                        success: function (data) {
+                            $('#input-enviaya-account').empty();
+                            $('#input-enviaya-account').append('<option disabled="disabled" selected=selected>{{ select_account }}</option>');
+
+                            data.enviaya_accounts.forEach(function (element) {
+                                $('#input-enviaya-account').append('<option value=' + element.account + ' selected=selected>' + element.alias + ' (' + element.account + ')</option>');
+                            });
+                        },
+                        error: function () {
+                            $('#input-enviaya-account').empty();
+                            $('#input-enviaya-account').append('<option disabled="disabled" selected=selected>{{ select_account }}</option>');
+                        }
+                    });
+                }
+
+                function ajaxDirection(api_key) {
+                    $.ajax({
+                        url: 'https://enviaya.com.mx/api/v1/directions?api_key=' + api_key,
+                        success: function (html) {
+                            $('#input-origin-direction').empty();
+                            $('#input-origin-direction').append('<option disabled="disabled" selected=selected>{{ select_sender }}</option>');
+                            var json = '';
+                            html.directions.forEach(function (element) {
+                                element.id = element.id.toString();
+                                var em = new Object();
+                                em.full_name = element.full_name
+                                em.company = element.company
+                                em.phone = element.phone
+                                em.email = element.email
+                                em.direction_1 = element.direction_1
+                                em.direction_2 = element.direction_2
+                                em.neighborhood = element.neighborhood
+                                em.district = element.district
+                                em.postal_code = element.postal_code
+                                em.city = element.city
+                                em.state_code = element.state_code
+                                em.country_code = element.country_code
+                                json = JSON.stringify(em);
+                                json = json.normalize();
+                                json = toASCII(json);
+                                $('#input-origin-direction').append('<option value=' + btoa(json) + '>' + element.full_name + '</option>');
+                            });
+                        },
+                        error: function () {
+                            $('#input-origin-direction').empty();
+                            $('#input-origin-direction').append('<option disabled="disabled" selected=selected>{{ select_sender }}</option>');
+                        }
+                    });
+                }
+
+                function toASCII(string) {
+                    var toFind = ['á', 'é', 'í', 'ó', 'ú', 'ñ', 'Á', 'É', 'Í', 'Ó', 'Ú', 'Ñ'];
+                    var toRepl = ['a', 'e', 'i', 'o', 'u', 'n', 'A', 'E', 'I', 'O', 'U', 'N'];
+
+                    for (var i = 0; i < toFind.length; i++) {
+                        var arr = string.split(toFind[i]);
+                        string = arr.join(toRepl[i]);
+                    }
+
+                    var arr = string.split('null');
+                    string = arr.join('\"\"');
+                    return string;
+                }
+
+                function apiKey() {
+                    var test_mode = $('#input-test-mode').val();
+                    if (test_mode == "1") {
+                        var result = $('#input-test-apikey').val();
+                    } else {
+                        var result = $('#input-apikey').val();
+                    }
+
+                    ajaxAccount(result);
+                    ajaxDirection(result);
+                    $('#direction-preview').empty();
+                }
+
+                $('#input-apikey').bind('change', function () {
+                    apiKey();
+                });
+
+                $('#input-test-apikey').bind('change', function () {
+                    apiKey();
+                });
+
+                $('#input-test-mode').bind('change', function () {
+                    apiKey();
+                });
+            </script>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ rating_configuration }}</h3>
+                </div>
+                <div class="panel-body">
+                    <h4>{{ rating_configuration }}</h4>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label" for="input-enable-rating">{{ enable_rating }}</label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_enable_rating" id="input-enable-rating" class="form-control">
+                                {% if shipping_enviaya_enable_rating %}
+                                    <option value="1" selected="selected">{{ yes }}</option>
+                                    <option value="0">{{ no }}</option>
+                                {% else %}
+                                    <option value="1">{{ yes }}</option>
+                                    <option value="0" selected="selected">{{ no }}</option>
+                                {% endif %}
+                            </select>
+                            <small>{{ remove_rating_zones_hint }}</small>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>{{ shipping_services_display }}</h4>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label" for="input-title"><span data-toggle="tooltip"
+                                                                                      title="{{ rates_title }}">{{ title }}</span></label>
+                        <div class="col-sm-10">
+                            <input type="text" name="shipping_enviaya_title" value="{{ shipping_enviaya_title }}"
+                                   id="input-title" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label" for="input-shipping-carrier-name"><span
+                                data-toggle="tooltip" title="{{ carrier_name_help }}">{{ carrier_name }}</span></label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_shipping_carrier_name" id="input-shipping-carrier-name"
+                                    class="form-control input-shipping-carrier-name">
+                                {% if shipping_enviaya_shipping_carrier_name == 0 %}
+                                    <option value="0" selected="selected">{{ carrier_name_option_1 }}</option>
+                                {% else %}
+                                    <option value="0">{{ carrier_name_option_1 }}</option>
+                                {% endif %}
+                                {% if shipping_enviaya_shipping_carrier_name == 1 %}
+                                    <option value="1" selected="selected">{{ carrier_name_option_2 }}</option>
+                                {% else %}
+                                    <option value="1">{{ carrier_name_option_2 }}</option>
+                                {% endif %}
+                            </select>
+                            <span data-toggle="comment"></span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label" for="input-shipping-service-name"><span
+                                data-toggle="tooltip" title="{{ service_name_help }}">{{ service_name }}</span></label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_shipping_service_name" id="input-shipping-service-name"
+                                    class="form-control">
+                                {% if shipping_enviaya_shipping_service_name == 0 %}
+                                    <option value="0" selected="selected">{{ service_name_1 }}</option>
+                                {% else %}
+                                    <option value="0">{{ service_name_1 }}</option>
+                                {% endif %}
+                                {% if shipping_enviaya_shipping_service_name == 1 %}
+                                    <option value="1" selected="selected">{{ service_name_2 }}</option>
+                                {% else %}
+                                    <option value="1">{{ service_name_2 }}</option>
+                                {% endif %}
+                                {% if shipping_enviaya_shipping_service_name == 2 %}
+                                    <option value="2" selected="selected">{{ service_name_3 }}</option>
+                                {% else %}
+                                    <option value="2">{{ service_name_3 }}</option>
+                                {% endif %}
+                                {% if shipping_enviaya_shipping_service_name == 3 %}
+                                    <option value="3" selected="selected">{{ service_name_4 }}</option>
+                                {% else %}
+                                    <option value="3">{{ service_name_4 }}</option>
+                                {% endif %}
+                            </select>
+                            <span data-toggle="comment"></span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label" for="input-shipping-delivery-time"><span
+                                data-toggle="tooltip"
+                                title='{{ shipping_delivery_time_help }}'>{{ shipping_delivery_time }}</span></label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_shipping_delivery_time" id="input-shipping-delivery-time"
+                                    class="form-control input-shipping-delivery-time">
+                                {% if shipping_enviaya_shipping_delivery_time == 0 %}
+                                    <option value="0" selected="selected">{{ show_estimated_delivery_date }}</option>
+                                {% else %}
+                                    <option value="0">{{ show_estimated_delivery_date }}</option>
+                                {% endif %}
+                                {% if shipping_enviaya_shipping_delivery_time == 1 %}
+                                    <option value="1" selected="selected">{{ show_transit_time }}</option>
+                                {% else %}
+                                    <option value="1">{{ show_transit_time }}</option>
+                                {% endif %}
+                                {% if shipping_enviaya_shipping_delivery_time == 2 %}
+                                    <option value="2" selected="selected">{{ do_not_show_delivery_time }}</option>
+                                {% else %}
+                                    <option value="2">{{ do_not_show_delivery_time }}</option>
+                                {% endif %}
+                            </select>
+                            <span data-toggle="comment"></span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label" for="input-shipping-services-design"><span
+                                data-toggle="tooltip"
+                                title='{{ shipping_services_design_help }}'>{{ shipping_services_design }}</span></label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_shipping_services_design" id="input-shipping-services-design"
+                                    class="form-control">
+                                {% if shipping_enviaya_shipping_services_design %}
+                                    <option value="1"
+                                            selected="selected">{{ default_shipping_services_design }}</option>
+                                    <option value="0">{{ advanced_shipping_services_design }}</option>
+                                {% else %}
+                                    <option value="1">{{ default_shipping_services_design }}</option>
+                                    <option value="0"
+                                            selected="selected">{{ advanced_shipping_services_design }}</option>
+                                {% endif %}
+                            </select>
+                            <span data-toggle="comment"></span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;" id="group-display-carrier-logo">
+                        <label class="col-sm-2 control-label"
+                               for="input-display-carrier-logo">{{ display_carrier_logo }}</label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_display_carrier_logo" id="input-display-carrier-logo"
+                                    class="form-control">
+                                {% if shipping_enviaya_display_carrier_logo %}
+                                    <option value="1" selected="selected">{{ yes }}</option>
+                                    <option value="0">{{ no }}</option>
+                                {% else %}
+                                    <option value="1">{{ yes }}</option>
+                                    <option value="0" selected="selected">{{ no }}</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;" id="group-services-display">
+                        <label class="col-sm-2 control-label"
+                               for="input-shipping-services-display">{{ shipping_services_display }}</label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_shipping_services_display"
+                                    id="input-shipping-services-display" class="form-control">
+                                {% if shipping_enviaya_shipping_services_display == 0 %}
+                                    <option value="0"
+                                            selected="selected">{{ advanced_shipping_services_design_1 }}</option>
+                                {% else %}
+                                    <option value="0">{{ advanced_shipping_services_design_1 }}</option>
+                                {% endif %}
+                                {% if shipping_enviaya_shipping_services_display == 1 %}
+                                    <option value="1"
+                                            selected="selected">{{ advanced_shipping_services_design_2 }}</option>
+                                {% else %}
+                                    <option value="1">{{ advanced_shipping_services_design_2 }}</option>
+                                {% endif %}
+                            </select>
+                            <span data-toggle="comment"></span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;" id="group-by-carrier">
+                        <label class="col-sm-2 control-label"
+                               for="input-group-by-carrier">{{ group_by_carrier }}</label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_group_by_carrier" id="input-group-by-carrier"
+                                    class="form-control">
+                                {% if shipping_enviaya_group_by_carrier %}
+                                    <option value="1" selected="selected">{{ yes }}</option>
+                                    <option value="0">{{ no }}</option>
+                                {% else %}
+                                    <option value="1">{{ yes }}</option>
+                                    <option value="0" selected="selected">{{ no }}</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        function getExample(element) {
+                            switch (element.value) {
+                                case '0':
+                                    $("#group-display-carrier-logo").show();
+                                    $("#group-by-carrier").show();
+                                    $("#group-services-display").show();
+                                    return '{{ advanced_shipping_services_design_warning }}';
+                                case '1':
+                                    $("#group-display-carrier-logo").hide();
+                                    $("#group-by-carrier").hide();
+                                    $("#group-services-display").hide();
+                                    return '<span style="display: block;">Example:</span><span id="example_carrier_name">Redpack - </span><span>Express</span><span class="delivery_time_1"> - 14/11/2017</span><span class="delivery_time_2"> - 1 day</span><span> ($ 156.43)</span>';
+                            }
+                        }
+
+                        let select = $('#input-shipping-services-design').get(0);
+                        $(select).next().html(getExample(select));
+                        $('#input-shipping-services-design').bind('change', function () {
+                            $(this).next().html(getExample(this));
+                            shippingDeliveryTime();
+                        });
+
+                        function shippingCarrierName() {
+                            if ($('.input-shipping-carrier-name').val() == "0") {
+                                $('#example_carrier_name').hide();
+                            } else {
+                                $('#example_carrier_name').show();
+                            }
+                        }
+
+                        $('.input-shipping-carrier-name').bind('change', function () {
+                            shippingCarrierName();
+                        });
+
+                        function shippingDeliveryTime() {
+                            if ($('.input-shipping-delivery-time').val() == "0") {
+                                $('.delivery_time_1').show();
+                                $('.delivery_time_2').hide();
+                                $('.br').show();
+                            } else if ($('.input-shipping-delivery-time').val() == "1") {
+                                $('.delivery_time_1').hide();
+                                $('.delivery_time_2').show();
+                                $('.br').show();
+                            } else {
+                                $('.delivery_time_1').hide();
+                                $('.delivery_time_2').hide();
+                                $('.br').hide();
+                            }
+                        }
+
+                        $('.input-shipping-delivery-time').bind('change', function () {
+                            shippingDeliveryTime();
+                        });
+
+                        function getExampleDisplay(element) {
+                            switch (element.value) {
+                                case '0':
+                                    return '<span style="display: block; margin-bottom: 5px;">Example:</span><img id="display-logo" style="vertical-align: middle; max-width: 100px; max-height: 40px; margin-right: 10px;" src="https://enviaya-public.s3-us-west-1.amazonaws.com/images/ups.png" alt=""><div style="display: inline-block; vertical-align: middle;"><span id="example_carrier_name">Redpack - </span><span id="example_service_name">Entrega en 2 días</span> <span class="br"> - </span> <span class="delivery_time_1" style="display: none;"> 14/11/2017</span><span class="delivery_time_2" style="display: none;"> 1 day</span><span> ($ 156.43)</span></div>';
+                                case '1':
+                                    return '<span style="display: block; margin-bottom: 5px;">Example:</span><img id="display-logo" style="vertical-align: middle; max-width: 100px; max-height: 40px; margin-right: 10px;" src="https://enviaya-public.s3-us-west-1.amazonaws.com/images/ups.png" alt=""><div style="display: inline-block; vertical-align: middle;"><span id="example_carrier_name">Redpack - </span><span id="example_service_name">Entrega en 2 días</span><span class="br"></br></span><span class="delivery_time_1" style="display: none;"> 14/11/2017</span><span class="delivery_time_2" style="display: none;"> 1 day</span><span> ($ 156.43)</span></div>';
+                            }
+                        }
+
+                        let display = $('#input-shipping-services-display').get(0);
+                        $(display).next().html(getExampleDisplay(display));
+                        $('#input-shipping-services-display').bind('change', function () {
+                            $(this).next().html(getExampleDisplay(this));
+                            shippingDeliveryTime();
+                            serviceName();
+                            displayLogo();
+                        });
+
+                        function displayLogo() {
+                            if ($('#input-display-carrier-logo').val() == "1") {
+                                $('#display-logo').show();
+                            } else {
+                                $('#display-logo').hide();
+                            }
+                        }
+
+                        $('#input-display-carrier-logo').bind('change', function () {
+                            displayLogo();
+                        });
+
+                        function serviceName() {
+                            if ($('#input-shipping-service-name').val() == "0") {
+                                $('#example_service_name').html('Entrega en 2 días');
+                            } else if ($('#input-shipping-service-name').val() == "1") {
+                                $('#example_service_name').html('Económico');
+                            } else if ($('#input-shipping-service-name').val() == "2") {
+                                $('#example_service_name').html('Express');
+                            } else {
+                                $('#example_service_name').html('');
+                                $('.br').hide();
+                            }
+                        }
+
+                        $('#input-shipping-service-name').bind('change', function () {
+                            serviceName();
+                        });
+
+                        $(document).ready(function () {
+                            shippingDeliveryTime();
+                            shippingCarrierName();
+                            displayLogo();
+                            serviceName();
+                        });
+
+                    </script>
+                    <hr>
+                    <p>{{ custom_design_text }}</p>
+                    <hr>
+                    <h4>{{ free_shipping }}</h4>
+                    <p>{{ free_shipping_text }}</p>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label"
+                               for="input-as-defined-price">{{ as_defined_price }}</label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_as_defined_price" id="input-as-defined-price"
+                                    class="form-control">
+                                {% if shipping_enviaya_as_defined_price == 0 %}
+                                    <option value="0" selected="selected">{{ do_not_show_price }}</option>
+                                {% else %}
+                                    <option value="0">{{ do_not_show_price }}</option>
+                                {% endif %}
+                                {% if shipping_enviaya_as_defined_price == 1 %}
+                                    <option value="1" selected="selected">{{ show_price_as }}</option>
+                                {% else %}
+                                    <option value="1">{{ show_price_as }}</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>{{ contingency_shipping_services }}</h4>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label" for="input-enable-contingency-shipping-services"><span
+                                data-toggle="tooltip"
+                                title="{{ contingency_services_help }}">{{ enable_contingency_shipping_services }}</span></label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_enable_contingency_shipping_services"
+                                    id="input-enable-contingency-shipping-services" class="form-control">
+                                {% if shipping_enviaya_enable_contingency_shipping_services %}
+                                    <option value="1" selected="selected">{{ yes }}</option>
+                                    <option value="0">{{ no }}</option>
+                                {% else %}
+                                    <option value="1">{{ yes }}</option>
+                                    <option value="0" selected="selected">{{ no }}</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group contingency-services" style="border:none;">
+                        <label class="col-sm-2 control-label"
+                               for="input-contingency-flat-standard">{{ contingency_standard_shipping }}</label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_contingency_standard_shipping"
+                                    id="input-contingency-flat-standard" class="form-control">
+                                {% if shipping_enviaya_contingency_standard_shipping %}
+                                    <option value="1" selected="selected">{{ yes }}</option>
+                                    <option value="0">{{ no }}</option>
+                                {% else %}
+                                    <option value="1">{{ yes }}</option>
+                                    <option value="0" selected="selected">{{ no }}</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group contingency-services" id="flat_standard" style="border:none;">
+                        <label class="col-sm-2 control-label" for="input-flat-standard"><span data-toggle="tooltip"
+                                                                                              title="{{ contingency_standard_rate_help }}">{{ contingency_standard_rate }}</span></label>
+                        <div class="col-sm-9">
+                            <input type="number" name="shipping_enviaya_flat_standard"
+                                   value="{{ shipping_enviaya_flat_standard }}" id="input-flat-standard"
+                                   class="form-control"/>
+                        </div>
+                        <div class="col-sm-1 control-label">
+                            {{ shipping_enviaya_currency }}
+                        </div>
+                    </div>
+                    <div class="form-group contingency-services" style="border:none;">
+                        <label class="col-sm-2 control-label"
+                               for="input-contingency-flat-express">{{ contingency_express_shipping }}</label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_contingency_express_shipping"
+                                    id="input-contingency-flat-express" class="form-control">
+                                {% if shipping_enviaya_contingency_express_shipping %}
+                                    <option value="1" selected="selected">{{ yes }}</option>
+                                    <option value="0">{{ no }}</option>
+                                {% else %}
+                                    <option value="1">{{ yes }}</option>
+                                    <option value="0" selected="selected">{{ no }}</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group contingency-services" id="flat-express" style="border:none;">
+                        <label class="col-sm-2 control-label" for="input-flat-express"><span data-toggle="tooltip"
+                                                                                             title="{{ contingency_express_rate_help }}">{{ contingency_express_rate }}</span></label>
+                        <div class="col-sm-9">
+                            <input type="number" name="shipping_enviaya_flat_express"
+                                   value="{{ shipping_enviaya_flat_express }}" id="input-flat-express"
+                                   class="form-control"/>
+                        </div>
+                        <div class="col-sm-1 control-label">
+                            {{ shipping_enviaya_currency }}
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        function contingencyShippingServices() {
+                            if ($('#input-enable-contingency-shipping-services').val() == "1") {
+                                $('.contingency-services').show();
+
+                                if ($('#input-contingency-flat-standard').val() == "1") {
+                                    $('#flat_standard').show();
+                                } else {
+                                    $('#flat_standard').hide();
+                                }
+
+                                if ($('#input-contingency-flat-express').val() == "1") {
+                                    $('#flat-express').show();
+                                } else {
+                                    $('#flat-express').hide();
+                                }
+                            } else {
+                                $('.contingency-services').hide();
+                            }
+                        }
+
+                        $(document).ready(function () {
+                            contingencyShippingServices();
+                        });
+
+                        $('#input-enable-contingency-shipping-services').on('change', function () {
+                            contingencyShippingServices();
+                        });
+
+                        $('#input-contingency-flat-standard').on('change', function () {
+                            contingencyShippingServices();
+                        });
+
+                        $('#input-contingency-flat-express').on('change', function () {
+                            contingencyShippingServices();
+                        });
+                    </script>
+                    <hr>
+                    <h4>{{ additional_account_configurations_title }}</h4>
+                    <p>{{ additional_account_configurations_text }}</p>
+                    <hr>
+                    <h4>{{ carrier_and_services_configuration }}</h4>
+                    <p>{{ carrier_and_services_configuration_help }}</p>
+                    <hr>
+                    <h4>{{ subsidies_title }}</h4>
+                    <p>{{ subsidies_text }}</p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ advanced_configuration }}</h3>
+                </div>
+                <div class="panel-body">
+                    <h4>{{ advanced_configuration }}</h4>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label"
+                               for="input-send-shipment-notifications"><span data-toggle="tooltip"
+                                                                             title="{{ send_shipment_notifications_help }}">{{ send_shipment_notifications }}</span></label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_send_shipment_notifications"
+                                    id="input-send-shipment-notifications" class="form-control">
+                                {% if shipping_enviaya_send_shipment_notifications %}
+                                    <option value="1" selected="selected">{{ yes }}</option>
+                                    <option value="0">{{ no }}</option>
+                                {% else %}
+                                    <option value="1">{{ yes }}</option>
+                                    <option value="0" selected="selected">{{ no }}</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ excluded_zones }}</h3>
+                </div>
+                <div class="panel-body">
+                    <h4>{{ excluded_zones_title }}</h4>
+                    <p>{{ excluded_zones_title_help }}</p>
+                    <hr>
+                    <table class=table>
+                        <thead>
+                        <tr>
+                            <th scope=col>
+                                <label class='control-label'>
+                           <span data-original-title='{{ zone_name_help }}' data-html='true'
+                                 data-toggle='tooltip' class='label-tooltip'
+                                 id='e_zone_name'>{{ zone_name }}</span>
+                                </label>
+                            </th>
+                            <th scope=col>
+                                <label class='control-label'>
+                           <span data-original-title='{{ zone_regions_help }}' data-html='true'
+                                 data-toggle='tooltip' class='label-tooltip'
+                                 id='e_zone_regions'>{{ zone_regions }}</span>
+                                </label>
+                            </th>
+                            <th scope=col>
+                                <label class='control-label'>
+                           <span data-original-title="{{ zone_regions_list_help }}" data-html='true'
+                                 data-toggle='tooltip' class='label-tooltip'
+                                 id='e_postcodes'>{{ excluded_zones }}</span>
+                                </label>
+                            </th>
+                            <th scope=col>
+                                <label class='control-label'>{{ delete }}</label>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody class='hasEmpty calculated-row'>
+                        </tbody>
+                    </table>
+                    <div class='text-right'>
+                        <a class='btn btn-default add_row '>{{ add_zone }}</a>
+                    </div>
+                    <input type="hidden" name="shipping_enviaya_zone_data" value="{{ shipping_enviaya_zone_data }}"
+                           id="shipping_enviaya_zone_data">
+                    <script>
+                        function createRow() {
+                            const _tmp = document.createElement('tbody');
+                            _tmp.innerHTML = `<td><input type=text name=excluded_zone_name[] class="form-control" placeholder="{{ zone_name }}" ></td>
+                                              <td><select name="excluded_zone_locations[]" class="form-control" multiple></select></td>
+                                              <td><textarea rows="4" name="excluded_zone_postcodes[]" class="form-control" placeholder="{{ zone_regions_list_placeholder }}"></textarea></td>
+                                              <td><a data-delete="" class="btn btn-default delete">{{ delete }}</a></td>`;
+                            return _tmp.firstElementChild;
+                        }
+
+                        function bindRowHandlers(row) {
+                            const excluded_zone_name = row.querySelector('input[name="excluded_zone_name[]"]');
+                            const excluded_zone_locations = row.querySelector('select[name="excluded_zone_locations[]"]');
+                            const excluded_zone_postcodes = row.querySelector('textarea[name="excluded_zone_postcodes[]"]');
+                        }
+
+                        function calculator() {
+                            const button = document.querySelector('.add_row');
+                            const rowsContainer = document.querySelector('.hasEmpty')
+                            const rows = Array.from(rowsContainer.querySelectorAll('.calculated-row'));
+                            rows.forEach(bindRowHandlers);
+                            button.addEventListener('click', () => {
+                                const newRow = createRow();
+                                bindRowHandlers(newRow);
+                                var countryCodeOptions = {{ countries_json }},
+                                    select = newRow.querySelector('select[name="excluded_zone_locations[]"]'),
+                                    countryCodeOptions = JSON.parse(JSON.stringify(countryCodeOptions));
+
+                                for (property in countryCodeOptions) {
+                                    select.options[select.options.length] = new Option(countryCodeOptions[property].name, countryCodeOptions[property].value);
+                                }
+                                rows.push(rowsContainer.appendChild(newRow));
+                            })
+                        }
+                        calculator();
+
+                        $(document).on('click', '[data-delete]', function () {
+                            $(this).closest('tr').remove()
+                            data = [];
+                            var ul = $('.hasEmpty tr');
+
+                            ul.each(function () {
+                                var inputs = $(this).find('[name]');
+                                var rowData = {};
+
+                                inputs.each(function () {
+                                    var name = $(this).attr('name');
+                                    var value = $(this).val();
+
+                                    rowData[name] = value;
+                                });
+                                data.push(rowData);
+                            });
+                            var table = (JSON.stringify(data));
+
+                            $('#shipping_enviaya_zone_data').val(table);
+                        });
+
+                        $(document).on('change', '.table', function () {
+                            data = [];
+                            var ul = $('.hasEmpty tr');
+
+                            ul.each(function () {
+                                var inputs = $(this).find('[name]');
+                                var rowData = {};
+
+                                inputs.each(function () {
+                                    var name = $(this).attr('name');
+                                    var value = $(this).val();
+
+                                    rowData[name] = value;
+                                });
+                                data.push(rowData);
+                            });
+                            var table = (JSON.stringify(data));
+
+                            $('#shipping_enviaya_zone_data').val(table);
+                        });
+
+                        function option(value) {
+                            var countryCodeOptions = {{ countries_json }},
+                                countryCodeOptions = JSON.parse(JSON.stringify(countryCodeOptions)),
+                                option = '';
+
+                            for (property in countryCodeOptions) {
+
+                                if (value && value.includes(countryCodeOptions[property].value)) {
+                                    option += '<option value=' + countryCodeOptions[property].value + ' selected=selected >' + countryCodeOptions[property].name + '</option>'
+                                } else {
+                                    option += '<option value=' + countryCodeOptions[property].value + '>' + countryCodeOptions[property].name + '</option>'
+                                }
+                            }
+
+                            return option;
+                        }
+
+                        function fillTableFromLS() {
+                            var zones_data = $('#shipping_enviaya_zone_data').val(),
+                                localValue = null;
+                            if (zones_data.length != 0) {
+                                localValue = JSON.parse($('#shipping_enviaya_zone_data').val());
+                            }
+                            if (localValue) {
+                                var countSongs = localValue.length;
+                                var tables = '';
+                                for (var i = 0; i < countSongs; i++) {
+                                    var excluded_zone_name = localValue[i]['excluded_zone_name[]'];
+                                    var excluded_zone_locations = localValue[i]['excluded_zone_locations[]'];
+                                    var excluded_zone_postcodes = localValue[i]['excluded_zone_postcodes[]'];
+
+                                    tables += ('<tr>' +
+                                        '<td><input type="text" name="excluded_zone_name[]" placeholder={{ zone_name }} class="form-control excluded_zone_name" value="' + excluded_zone_name + '"></td>' +
+                                        '<td><select name="excluded_zone_locations[]" class="form-control excluded_zone_locations" multiple value="' + excluded_zone_locations + '">' + option(excluded_zone_locations) + '</select></td>' +
+                                        '<td><textarea rows="4" name="excluded_zone_postcodes[]" placeholder="{{ zone_regions_list_placeholder }}" class="form-control excluded_zone_postcodes">' + excluded_zone_postcodes + '</textarea></td>' +
+                                        '<td><button data-delete="" class="btn btn-default delete">{{ delete }}</td>' +
+                                        '</tr>');
+                                }
+                                $('tbody').prepend(tables);
+
+                            }
+                        };
+                        fillTableFromLS();
+                    </script>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ sender_address }}</h3>
+                </div>
+                <div class="panel-body">
+                    <h4>{{ sender_address }}</h4>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label" for="input-origin-direction">{{ sender_address }}</label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_origin_direction" id="input-origin-direction"
+                                    class="form-control">
+                                {% if origin_directions|length != 1 %}
+                                    <option value="" disabled="disabled"
+                                            selected="selected">{{ select_sender }}</option>
+                                {% endif %}
+                                {% for direction in origin_directions %}
+                                    {% if direction.value|escape == shipping_enviaya_origin_direction %}
+                                        <option value="{{ direction.value|escape }}"
+                                                selected="selected">{{ direction.label }}</option>
+                                    {% else %}
+                                        <option value="{{ direction.value|escape }}">{{ direction.label }}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                            <a href="https://app.{{ api_domain }}/directions/new?origin=true" target="_blank"
+                               style="margin-top: 5px; display: block;">{{ add_new_sender }}</a>
+                            <div id="direction-preview">
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        function previewDirection(address) {
+                            var addressKeys = [
+                                'full_name',
+                                'company',
+                                'phone',
+                                'email',
+                                'direction_1',
+                                'direction_2',
+                                'neighborhood',
+                                'district',
+                                'postal_code',
+                                'city',
+                                'state_code',
+                                'country_code'
+                            ];
+                            var addressInfo = '';
+                            addressKeys.forEach(function (key) {
+                                if (address[key]) {
+                                    addressInfo += address[key];
+                                    if (key == 'postal_code') {
+                                        addressInfo += ' ';
+                                    } else if (key == 'city') {
+                                        addressInfo += ', ';
+                                    } else {
+                                        addressInfo += '<br/>';
+                                    }
+                                }
+                                if (key == 'email') {
+                                    addressInfo += '<br/>';
+                                }
+                            });
+
+                            $('#direction-preview').html('<hr>' + addressInfo);
+                        }
+
+                        $('#input-origin-direction').bind('change', function (event) {
+                            if ($('#input-origin-direction').val() !== null) {
+                                previewDirection(JSON.parse(atob(event.target.value)));
+                            }
+                        });
+
+                        if ($('#input-origin-direction').val() !== null) {
+                            previewDirection(JSON.parse(atob($('#input-origin-direction').val())));
+                        }
+
+
+                    </script>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ technical_configuration }}</h3>
+                </div>
+                <div class="panel-body">
+                    <h4>{{ technical_configuration }}</h4>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label" for="input-service-timeout"><span data-toggle="tooltip"
+                                                                                                title="{{ timeout_help }}">{{ timeout }}</span></label>
+                        <div class="col-sm-10">
+                            <input type="number" name="shipping_enviaya_service_timeout"
+                                   value="{{ shipping_enviaya_service_timeout }}"
+                                   id="input-service-timeout" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label" for="enable-api-logs-help"><span data-toggle="tooltip"
+                                                                                               title="{{ enable_api_logs_help }}">{{ enable_api_logs }}</span></label>
+                        <div class="col-sm-10">
+                            <select name="shipping_enviaya_enable_api_logs" id="enable-api-logs-help"
+                                    class="form-control">
+                                {% if shipping_enviaya_enable_api_logs %}
+                                    <option value="1" selected="selected">{{ yes }}</option>
+                                    <option value="0">{{ no }}</option>
+                                {% else %}
+                                    <option value="1">{{ yes }}</option>
+                                    <option value="0" selected="selected">{{ no }}</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label">{{ download_api_logs }}</label>
+                        <div class="col-sm-10">
+                            <a class="btn btn-default" href="{{ download }}">{{ download_api_logs }}</a>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label">{{ delete_api_logs }}</label>
+                        <div class="col-sm-10">
+                            <button type="button" class="btn btn-default" data-toggle="modal"
+                                    data-target="#deleteApiLogs">
+                                {{ delete_api_logs }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ status }}</h3>
+                </div>
+                <div class="panel-body">
+                    <h4>{{ status }}</h4>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label">{{ domain }}</label>
+                        <div class="col-sm-10">
+                            <span style="margin-top: 9px; display: block;">{{ server_name }}</span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label">{{ php_version }}</label>
+                        <div class="col-sm-10">
+                            <span style="margin-top: 9px; display: block;">{{ php }}</span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label">{{ opencart_version }}</label>
+                        <div class="col-sm-10">
+                            <span style="margin-top: 9px; display: block;">{{ version }}</span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label">{{ curl_existence }}</label>
+                        <div class="col-sm-10">
+                            <span style="margin-top: 9px; display: block;">{{ curl }}</span>
+                        </div>
+                    </div>
+                    <div class="form-group" style="border:none;">
+                        <label class="col-sm-2 control-label" for="support-code">{{ support_code }}</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="support_code" value="{{ support_code_value }}"
+                                   id="support-code" class="form-control"/>
+                            <br>
+                            <a class="btn btn-default" onclick="copyToStringSupport(); return false;">{{ copy }}</a>
+                        </div>
+                    </div>
+                    <script>
+                        function copyToStringSupport() {
+                            var copyText = document.getElementById('support-code');
+                            copyText.select();
+                            document.execCommand('Copy');
+                        }
+                    </script>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="deleteApiLogs" tabindex="-1" role="dialog" aria-labelledby="deleteApiLogsLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="{{ close }}">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {{ delete_api_logs_confirmation }}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ close }}</button>
+                <a class="btn btn-primary" href="{{ clear }}">{{ delete }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Large modal -->
+<!-- Modal -->
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="welcome" id="welcome" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div id="screen_1">
+                        <h4>{{ welcome_screen_1_title }}</h4>
+                        <p>{{ welcome_screen_1_text }}</p>
+
+                        <div class="form-group" style="border:none;">
+                            <label class="col-sm-2 control-label" for="instruction_api"><span data-toggle="tooltip"
+                                                                                              title="{{ api_key_help }}">{{ api_key }}</span></label>
+                            <div class="col-sm-10">
+                                <input type="text" name="instruction_api" id="instruction_api" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group" style="border:none;">
+                            <label class="col-sm-2 control-label" for="instruction_test_api"><span data-toggle="tooltip"
+                                                                                                   title="{{ api_key_help }}">{{ test_api_key }}</span></label>
+                            <div class="col-sm-10">
+                                <input type="text" name="test_api" id="instruction_test_api" class="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="screen_2" style="display: none;">
+                        <h4>{{ welcome_screen_2_title }}</h4>
+                        <p>{{ welcome_screen_2_text }}</p>
+
+                        <div class="form-group" style="border:none;">
+                            <label class="col-sm-2 control-label" for="instruction_account"><span data-toggle="tooltip"
+                                                                                                  title="{{ billing_account_help }}">{{ billing_account }}</span></label>
+                            <div class="col-sm-10">
+                                <select name="instruction_account" id="instruction_account" class="form-control">
+                                    <option value="" disabled="disabled"
+                                            selected="selected">{{ select_account }}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="screen_3" style="display: none;">
+                        <h4>{{ welcome_screen_3_title }}</h4>
+                        <p>{{ welcome_screen_3_text }}</p>
+
+                        <div class="form-group" style="border:none;">
+                            <label class="col-sm-2 control-label"
+                                   for="instruction_origin_direction">{{ sender_address }}</label>
+                            <div class="col-sm-10">
+                                <select name="instruction_origin_direction" id="instruction_origin_direction"
+                                        class="form-control">
+                                    <option value="" disabled="disabled"
+                                            selected="selected">{{ get_origin_addresses }}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="screen_4" style="display: none;">
+                        <h4>{{ welcome_screen_4_title }}</h4>
+                        <p>{{ welcome_screen_4_text }}</p>
+                    </div>
+
+                    <div id="screen_5" style="display: none;">
+                        <h4>{{ welcome_screen_5_title }}</h4>
+                        <p>{{ welcome_screen_5_text }}</p>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ close }}</button>
+                <button type="button" class="btn btn-primary countinue" disabled>{{ continue }}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    if ($("#input-apikey").val().length === 0 && $("#input-test-apikey").val().length === 0) {
+        $('#welcome').modal('show');
+    }
+
+    function instructionAjaxAccount(api_key) {
+        $.ajax({
+            url: 'https://enviaya.com.mx/api/v1/get_accounts?api_key=' + api_key,
+            success: function (data) {
+                $('#instruction_account').empty();
+                $('#instruction_account').append('<option disabled="disabled" selected=selected>{{ select_account }}</option>');
+
+                data.enviaya_accounts.forEach(function (element) {
+                    $('#instruction_account').append('<option value=' + element.account + ' selected=selected>' + element.alias + ' (' + element.account + ')</option>');
+                });
+
+                $('#input-enviaya-account').empty();
+                $('#input-enviaya-account').append('<option disabled="disabled" selected=selected>{{ select_account }}</option>');
+
+                data.enviaya_accounts.forEach(function (element) {
+                    $('#input-enviaya-account').append('<option value=' + element.account + ' selected=selected>' + element.alias + ' (' + element.account + ')</option>');
+                });
+
+                $('.countinue').addClass("screen_2");
+                $('.countinue').prop('disabled', false);
+            },
+            error: function () {
+                $('.countinue').removeClass("screen_2");
+                $('.countinue').prop('disabled', true);
+                $('#instruction_account').empty();
+                $('#instruction_account').append('<option disabled="disabled" selected=selected>{{ select_account }}</option>');
+            }
+        });
+    }
+
+    function instructionAjaxDirection(api_key) {
+        $.ajax({
+            url: 'https://enviaya.com.mx/api/v1/directions?api_key=' + api_key,
+            success: function (html) {
+                $('#instruction_origin_direction').empty();
+                $('#instruction_origin_direction').append('<option disabled="disabled" selected=selected>{{ get_origin_addresses }}</option>');
+
+                ajaxDirection(api_key);
+
+                var json = '';
+                let arr = [];
+                html.directions.forEach(function (element) {
+                    element.id = element.id.toString();
+                    var em = new Object();
+                    em.full_name = element.full_name
+                    em.company = element.company
+                    em.phone = element.phone
+                    em.email = element.email
+                    em.direction_1 = element.direction_1
+                    em.direction_2 = element.direction_2
+                    em.neighborhood = element.neighborhood
+                    em.district = element.district
+                    em.postal_code = element.postal_code
+                    em.city = element.city
+                    em.state_code = element.state_code
+                    em.country_code = element.country_code
+                    json = JSON.stringify(em);
+                    json = json.normalize();
+                    json = toASCII(json);
+                    $('#instruction_origin_direction').append('<option value=' + btoa(json) + '>' + element.full_name + '</option>');
+                });
+            },
+            error: function () {
+                $('#instruction_origin_direction').empty();
+                $('#instruction_origin_direction').append('<option disabled="disabled" selected=selected>{{ get_origin_addresses }}</option>');
+            }
+        });
+    }
+
+    function instructionApiKey() {
+        var test_mode = $('#input-test-mode').val();
+
+        if (test_mode == "1") {
+            var result = $('#instruction_test_api').val();
+        } else {
+            var result = $('#instruction_api').val();
+        }
+
+        instructionAjaxAccount(result);
+        instructionAjaxDirection(result);
+    }
+
+    $("#instruction_account").change(function () {
+        $("#input-enviaya-account").val($("#instruction_account").val());
+    });
+    $("#instruction_origin_direction").change(function () {
+        $("#input-origin-direction").val($("#instruction_origin_direction").val());
+        $('.countinue').prop('disabled', false);
+
+        if ($('#instruction_origin_direction').val() !== null) {
+            previewDirection(JSON.parse(atob(event.target.value)));
+        }
+    });
+    $("#instruction_api").keyup(function () {
+        instructionApiKey();
+        $("#input-apikey").val($("#instruction_api").val());
+    });
+
+    $("#instruction_test_api").keyup(function () {
+        instructionApiKey();
+        $("#input-test-apikey").val($("#instruction_test_api").val());
+    });
+
+    $(document).on('click', '.screen_2', function () {
+        $('.countinue').removeClass("screen_2");
+        $('.countinue').addClass("screen_3");
+
+        $("#screen_1").hide();
+        $("#screen_2").show();
+    });
+
+    $(document).on('click', '.screen_3', function () {
+        $('.countinue').removeClass("screen_3");
+        $('.countinue').addClass("screen_4");
+
+        $('.countinue').prop('disabled', true);
+
+        $("#screen_2").hide();
+        $("#screen_3").show();
+    });
+
+    $(document).on('click', '.screen_4', function () {
+        $('.countinue').removeClass("screen_4");
+        $('.countinue').addClass("screen_5");
+
+        $("#screen_3").hide();
+        $("#screen_4").show();
+    });
+
+    $(document).on('click', '.screen_5', function () {
+        $('.countinue').removeClass("screen_5");
+        $('.countinue').addClass("save_btn");
+        $(".countinue").html('Save');
+
+        $("#screen_4").hide();
+        $("#screen_5").show();
+    });
+
+    $(document).on('click', '.save_btn', function () {
+        $("#form-shipping").submit();
+    });
+</script>
+{{ footer }}

@@ -1,0 +1,1 @@
+2021-01-02 17:51:06 - PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'shop' in C:\xampp\htdocs\mfa\Shop\system\library\db\mysqli.php on line 7

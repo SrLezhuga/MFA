@@ -1,0 +1,116 @@
+{% if selectRates %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{% if trackings %}{{ translate.update_shipment }}{% else %}{{ translate.create_shipment }}{% endif %}</h3>
+        </div>
+        <div class="panel-body">
+            {% if errors %}
+                <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ errors }}
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                </div>
+            {% endif %}
+            <div class="col-sm-4">
+                <img src="{{ active_rate.carrier_logo_url }}" alt="{{ active_rate.carrier }}"
+                     style="display: block; max-width: 150px; margin: 1rem auto;">
+                <b>Service:</b>
+                <p>{% if active_rate.free_shipping %}{{ active_rate.free_shipping }} | {% endif %}{{ active_rate.carrier }} {{ active_rate.carrier_service_name }}
+                    ({{ active_rate.total_amount }} {{ active_rate.currency }})</p>
+                <hr>
+                <form method="post">
+                    <div class="form-group">
+                        <label class="control-label"><p>{{ translate.shipping_service }}</p></label>
+                        <select name="{% if trackings %}update_shipment{% else %}create_shipment{% endif %}"
+                                class="form-control">
+                            {% for rate in selectRates %}
+                                {% if rate.active %}
+                                    <option
+                                        value="{{ rate.rate_id }}, {{ rate.carrier }}, {{ rate.carrier_service_code }}, {{ rate.total_amount }}"
+                                        selected>
+                                        {% if rate.free_shipping %}{{ rate.free_shipping }} | {% endif %}{{ rate.carrier }} {{ rate.carrier_service_name }}
+                                        ({{ rate.total_amount }} {{ rate.currency }})
+                                    </option>
+                                {% else %}
+                                    <option
+                                        value="{{ rate.rate_id }}, {{ rate.carrier }}, {{ rate.carrier_service_code }}, {{ rate.total_amount }}">
+                                        {% if rate.free_shipping %}{{ rate.free_shipping }} | {% endif %}{{ rate.carrier }} {{ rate.carrier_service_name }}
+                                        ({{ rate.total_amount }} {{ rate.currency }})
+                                    </option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="text-right">
+                        {% if trackings %}
+                            <input class="btn btn-primary" type="submit" value="{{ translate.update_shipment }}">
+                        {% else %}
+                            <input class="btn btn-primary" type="submit" value="{{ translate.create_shipment }}">
+                        {% endif %}
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-8">
+                {% for tracking in trackings %}
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <b>{{ translate.enviaya_shipment_number }}</b>
+                            <p id="shipment_number">{{ tracking.enviaya_shipment_number }}</p>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <b>{{ translate.carrier_tracking_number }}</b>
+                            <p>{{ tracking.carrier_tracking_number }}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <b>{{ translate.shipment_status }}</b>
+                            <p>{{ tracking.shipment_status }}</p>
+                        </div>
+
+                        {% if tracking.pickup_date %}
+                            <div class="col-sm-6">
+                                <b>{{ translate.pickup_date }}</b>
+                                <p>{{ tracking.pickup_date|date('Y/m/d H:i (e P)') }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <b>{{ translate.delivery_date }}</b>
+                            <p>{{ tracking.estimated_delivery_date }}</p>
+                        </div>
+
+                        {% if tracking.checkpoints|length %}
+                            <div class="col-sm-6">
+                                <b>{{ translate.checkpoints }}</b>
+                                {% for checkpoint in tracking.checkpoints %}
+                                    <div>
+                                        {{ checkpoint.country }}
+                                        {{ checkpoint.city }}
+                                        {{ checkpoint.code }}
+                                        {{ checkpoint.postal_code }}
+                                        {{ checkpoint.description }}
+                                        {{ checkpoint.date }}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <hr>
+                    <div class="text-right">
+                        <a class="btn btn-default"
+                           href="javascript:window.location.href=window.location.href">{{ translate.update_status }}</a>
+                        <a id="track_number" class="btn btn-default"
+                           href="https://enviaya.com.mx/track?track_ref={{ tracking.enviaya_shipment_number }}&show_events=true"
+                           target="_blank">{{ translate.track }}</a>
+                        <a id="download_label" class="btn btn-default" href="{{ tracking.label_url }}"
+                           target="_blank">{{ translate.download_label }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endif %}
+
