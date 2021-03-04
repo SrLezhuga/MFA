@@ -25,8 +25,26 @@
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="p-4">
-                            <form class="user" action="http://localhost/mfa/assets/controler/login" method="POST">
+
+
+                            <script src='https://www.google.com/recaptcha/api.js?render=6Len7XEaAAAAAI2kAiuOVG-p8YQUajHe8jo9WQ35'>
+                            </script>
+                            <script>
+                                grecaptcha.ready(function() {
+                                    grecaptcha.execute('6Len7XEaAAAAAI2kAiuOVG-p8YQUajHe8jo9WQ35', {
+                                            action: 'formulario'
+                                        })
+                                        .then(function(token) {
+                                            var recaptchaResponse = document.getElementById('recaptchaResponse');
+                                            recaptchaResponse.value = token;
+                                        });
+                                });
+                            </script>
+
+
+                            <form class="user" action="https://mayoreoferreteroatlas.com/mfa/assets/controler/login" method="POST">
                                 <!-- Input Oculto del recaptcha-->
+                                <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
                                 <div class="input-group ">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
@@ -47,6 +65,10 @@
                                 <br>
                                 <button type="submit" class="btn btn-outline-danger btn-block btn-lg"><i class="fas fa-sign-in-alt"></i> Inicio Sesión</button>
                             </form>
+
+
+
+
                         </div>
                     </div>
                 </div>

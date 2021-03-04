@@ -29,10 +29,10 @@
 							<div class="jumbotron jumbotron-fluid" style="background-color: #dc3545;">
 								<div class="container">
 									<a>
-										<img src="assets/img/Logo/logo.png" class="img-fluid mx-auto d-block logo-mfa">
+										<img src="assets/img/logo/logo.png" class="img-fluid mx-auto d-block logo-mfa">
 									</a>
 									<p class="lead">
-										<img src="assets/img/Logo/logo-mfa.png" class="img-fluid mx-auto d-block">
+										<img src="assets/img/logo/logo-mfa.png" class="img-fluid mx-auto d-block">
 									</p>
 								</div>
 							</div>
@@ -79,7 +79,7 @@
 
 							<div class="row">
 								<div class="col-lg-2 col-sm-12">
-									<img src="assets/img/Logo/logo.png" class="img-fluid mx-auto d-block logo-shop wow  slideInLeft">
+									<img src="assets/img/logo/logo.png" class="img-fluid mx-auto d-block logo-shop wow  slideInLeft">
 								</div>
 								<div class="col-lg-10 col-sm-12 text-left wow slideInRight">
 									<h3>Un Inventario de más de 30,000 artículos, servicio de urgencia, calidad y asesoría técnica, son nuestra carta de presentación.

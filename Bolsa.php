@@ -29,10 +29,10 @@
 							<div class="jumbotron jumbotron-fluid" style="background-color: #dc3545;">
 								<div class="container">
 									<a>
-										<img src="assets/img/Logo/logo.png" class="img-fluid mx-auto d-block logo-mfa">
+										<img src="assets/img/logo/logo.png" class="img-fluid mx-auto d-block logo-mfa">
 									</a>
 									<p class="lead">
-										<img src="assets/img/Logo/logo-mfa.png" class="img-fluid mx-auto d-block">
+										<img src="assets/img/logo/logo-mfa.png" class="img-fluid mx-auto d-block">
 									</p>
 								</div>
 							</div>
