@@ -29,15 +29,15 @@ if ($jsonResponse->success === true) {
         $priv_user  =  $rs['Priv'];
 
         if ($priv_user == "Admin") {
-            header("Location: https://mayoreoferreteroatlas.com/mfa/Administrar.php");
+            header("Location: Administrar");
         } elseif ($priv_user == "RH") {
-            header("Location: https://mayoreoferreteroatlas.com/mfa/Reclutamiento.php");
+            header("Location: Reclutamiento");
         } else {
-            header("Location: https://mayoreoferreteroatlas.com/mfa/500.php");
+            header("Location: 500");
         }
     }
 
     mysqli_close($con);
 } else {
-    echo "error";
+    header("Location: 404");
 }
