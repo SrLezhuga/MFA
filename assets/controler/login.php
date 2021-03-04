@@ -15,11 +15,11 @@ if ($con->query($sql)) {
     $priv_user  =  $rs['Priv'];
 
     if ($priv_user == "Admin") {
-        header("Location: https://mayoreoferreteroatlas.com/Administrar");
+        header("Location: https://mayoreoferreteroatlas.com/mfa/Administrar");
     } elseif ($priv_user == "RH") {
-        header("Location: https://mayoreoferreteroatlas.com/Reclutamiento");
+        header("Location: https://mayoreoferreteroatlas.com/mfa/Reclutamiento");
     } else {
-        header("Location: https://mayoreoferreteroatlas.com/500");
+        header("Location: https://mayoreoferreteroatlas.com/mfa/500");
     }
 }
 
