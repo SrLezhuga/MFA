@@ -13,5 +13,6 @@ RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html
 #RewriteRule ^([a-z]+)/?$ $1.html [NC]
 
-ErrorDocument 404 http://localhost/mfa/404
+ErrorDocument 404 https://mayoreoferreteroatlas.com/mfa/404
+ErrorDocument 500 https://mayoreoferreteroatlas.com/mfa/500
 </IfModule>

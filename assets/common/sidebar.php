@@ -10,7 +10,7 @@
         <a href="index">
             <img border="0" class="img-fluid mx-auto d-block" alt="Mayoreo Ferretero" src="assets/img/logo/logo.png" width="40%" height="100%" ;>
         </a>
-        <img src="assets/img/Logo/logo-mfa.png" class="img-fluid mx-auto d-block">
+        <img src="assets/img/logo/logo-mfa.png" class="img-fluid mx-auto d-block">
     </div>
 
     <ul class="list-unstyled menu-elements">

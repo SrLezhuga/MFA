@@ -38,10 +38,10 @@
 							<div class="jumbotron jumbotron-fluid" style="background-color: #dc3545;">
 								<div class="container">
 									<a>
-										<img src="assets/img/Logo/logo.png" class="img-fluid mx-auto d-block logo-mfa">
+										<img src="assets/img/logo/logo.png" class="img-fluid mx-auto d-block logo-mfa">
 									</a>
 									<p class="lead">
-										<img src="assets/img/Logo/logo-mfa.png" class="img-fluid mx-auto d-block">
+										<img src="assets/img/logo/logo-mfa.png" class="img-fluid mx-auto d-block">
 									</p>
 								</div>
 							</div>
@@ -61,14 +61,14 @@
 								<div class="col-lg-2 col-sm-12">
 
 									<a>
-										<img src="assets/img/Logo/logo.png" class="img-fluid mx-auto d-block logo-shop wow  slideInLeft">
+										<img src="assets/img/logo/logo.png" class="img-fluid mx-auto d-block logo-shop wow  slideInLeft">
 									</a>
 
 								</div>
 								<div class="col-lg-10 col-sm-12">
 									<h2 class="white wow  slideInRight">Visita nuestra tienda en linea!</h2>
 									<br>
-									<a href="./shop" class="btn btn-outline-danger btn-block btn-lg wow  slideInRight" role="button">
+									<a href="#" class="btn btn-outline-danger btn-block btn-lg wow  slideInRight" role="button">
 										<i class="fas fa-shopping-cart"></i> Ir a la tienda</a>
 
 

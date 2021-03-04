@@ -24,9 +24,9 @@
 						<br>
 						<img class='img-fluid mx-auto d-block' src='../mfa/assets/img/logo/logo.webp' style='height: 160px; width: 160px; z-index: 0; opacity: 1;' onContextMenu='return false;' draggable='false'>
 						<br>
-						<div class="error mx-auto" data-text="404">404</div>
-						<p class="lead text-gray-800 mb-5">Página no encontrada</p>
-						<p class="text-gray-500 mb-0">Parece que encontraste un fallo en la matriz...</p>
+						<div class="error mx-auto" data-text="500">500</div>
+						<p class="lead text-gray-800 mb-5">Página prohibida.</p>
+						<p class="text-gray-500 mb-0">Parece que no tienes permisos en la matriz...</p>
 						<a href="index">&larr; Volver al inicio</a>
 					</div>
 
@@ -34,8 +34,6 @@
 			</div>
 
 
-
-			
 
 		</div>
 		<!-- End content -->
