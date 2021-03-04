@@ -14,6 +14,7 @@ curl_close($ch);
 
 $jsonResponse = json_decode($response);
 if ($jsonResponse->success === true) { 
+    echo "correcto";
     include "conexion.php";
 
     $user      = $_POST['formUser'];
@@ -36,7 +37,7 @@ if ($jsonResponse->success === true) {
     
     mysqli_close($con);
 } else {
-    header("Location: https://mayoreoferreteroatlas.com/mfa/404");
+    echo "error";
 }
 
 

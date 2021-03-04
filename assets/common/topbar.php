@@ -11,18 +11,13 @@
         <!-- Modal content-->
         <div class="modal-content border-left-danger shadow">
             <div class="modal-body">
+                <center>
+                    <img src="assets\img\logo\logo.webp" class="mx-auto d-block" style="width: 75%;" onContextMenu="return false;" draggable="false" />
+                </center>
                 <h1 class="modal-title text-center h4 text-gray-900 "><b>Mayoreo Ferretero</b></h1>
                 <br>
                 <div class="row card-color">
 
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div>
-                            <div class="text-center">
-                                <center><img src="assets\img\Logo\logo.webp" class="mx-auto d-block" style="width: 75%;" onContextMenu="return false;" draggable="false" />
-                                </center>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="p-4">
 
