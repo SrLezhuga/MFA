@@ -10,7 +10,7 @@ $db="";*/
 $host     = "localhost";
 $user     = "mayoreof_Mfa_2021";
 $password = "mPH7#)So[4n%";
-$db       = "mfa_web";
+$db       = "mayoreof_mfa_web";
 
 $con = new mysqli($host, $user, $password, $db) or die("No se ha podido conectar al servidor de Base de datos");
 mysqli_set_charset($con, 'utf8');
