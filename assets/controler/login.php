@@ -17,8 +17,8 @@ if ($jsonResponse->success === true) {
     echo "correcto";
     include "conexion.php";
 
-    $user      = $_POST['formUser'];
-    $password  = $_POST['formPass'];
+    echo $user      = $_POST['formUser'];
+    echo $password  = $_POST['formPass'];
     
     $encry = sha1($password);
     $sql        =  "SELECT * FROM tab_login WHERE User= '$user' AND Pass = '$encry'";
@@ -27,6 +27,10 @@ if ($jsonResponse->success === true) {
     $priv_user  =  $rs['Priv'];
     $type_user  =  $rs['User'];
     
+    if ($con->query($sql)) {
+        echo "consulta ok";
+    }
+
     if ($priv_user == "Admin") {
         header("Location: https://mayoreoferreteroatlas.com/mfa/Administrar");
     } elseif ($priv_user == "RH") {
