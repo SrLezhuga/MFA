@@ -6,7 +6,7 @@
 <meta name="description" content="">
 <meta name="author" content="Lechuga">
 
-<link rel="icon" href="assets/img/Logo/MFA.ico" />
+<link rel="icon" href="assets/img/logo/MFA.ico" />
 
 <!-- Custom styles for this template-->
 <link href="assets/css/code.css" rel="stylesheet" />
