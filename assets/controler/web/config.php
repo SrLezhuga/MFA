@@ -1,4 +1,5 @@
 <?php
+$comita="'";
 echo '
 
 <fieldset class="border p-2">
@@ -83,25 +84,17 @@ echo '
         </div>
         <div class="col-6">
             <label>Imagen Logo:</label>
-            <div class="input-group ">
-                <div class="input-group-prepend">
-                </div>
-                <input type="file" class="form-control-file border" name="img_logo" id="img_logo">
+            <div class="file-field">
+                <img class="img-logo-web" src="assets/img/upload.gif" onerror="this.src='.$comita.'assets/img/upload.gif'.$comita.';" height="auto" width="100%">
+                <input type="file" id="img_logo" class="fileo .fileInput3">
             </div>
         </div>
         <div class="col-6">
             <label>Imagen Sucursal:</label>
-            <div class="input-group ">
-                <div class="input-group-prepend">
-                </div>
-                <input type="file" class="form-control-file border" name="img_suc" id="img_suc">
+            <div class="file-field">
+                <img class="img-suc-web" src="assets/img/upload.gif" onerror="this.src='.$comita.'assets/img/upload.gif'.$comita.';" height="auto" width="100%">
+                <input type="file" id="img_suc" class="fileo .fileInput3">
             </div>
-        </div>
-        <div class="col-6">
-            <img class="img-logo-web" src="assets/img/banners/default.png" style="width: 100%;">
-        </div>
-        <div class="col-6">
-            <img class="img-suc-web" src="assets/img/banners/default.png" style="width: 100%;">
         </div>
         <div class="col-10"></div>
         <div class="col-2">
@@ -167,6 +160,8 @@ echo '
                 success: function(data) {
                     if (data == 0) {
                         getWeb();
+                        $("#img_logo").val("");
+                        $("#img_suc").val("");
                         Swal.fire(
                             "Mensaje de confirmación",
                             "Se actualizaron los datos",

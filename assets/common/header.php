@@ -13,10 +13,7 @@
 <link rel="stylesheet" href="assets/css/animate.css">
 
 <!-- Social Media -->
-<script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
 <!-- Javascript menu-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -51,4 +48,7 @@
 <!-- Custom scripts for all pages-->
 <script src="assets/js/sb-admin-2.min.js"></script>
 
-
+<!-- Data Tables -->
+<script src="assets/modulo/datatables/jquery.dataTables.min.js"></script>
+<script src="assets/modulo/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="assets/js/datatables-demo.js"></script>

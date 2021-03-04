@@ -27,7 +27,6 @@ if (!empty($_FILES['img_logo']['name'])) {
             unlink("../../img/" . $sucursal . "/" . $img_logo);
             move_uploaded_file($_FILES["img_logo"]["tmp_name"], "../../img/" . $sucursal . "/" . $_FILES['img_logo']['name']);
         } else {
-            unlink("../../img/" . $sucursal . "/" . $Web['Img_logo']);
             move_uploaded_file($_FILES["img_logo"]["tmp_name"], "../../img/" . $sucursal . "/" . $_FILES['img_logo']['name']);
         }
     } else {
@@ -50,7 +49,6 @@ if (!empty($_FILES['img_suc']['name'])) {
             unlink("../../img/" . $sucursal . "/" . $img_suc);
             move_uploaded_file($_FILES["img_suc"]["tmp_name"], "../../img/" . $sucursal . "/" . $_FILES['img_suc']['name']);
         } else {
-            unlink("../../img/" . $sucursal . "/" . $Web['Img_sucursal']);
             move_uploaded_file($_FILES["img_suc"]["tmp_name"], "../../img/" . $sucursal . "/" . $_FILES['img_suc']['name']);
         }
     } else {

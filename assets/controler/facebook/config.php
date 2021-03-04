@@ -1,6 +1,3 @@
-<?php
-echo'
-
 <fieldset class="border p-2">
     <legend class="w-auto"><b>Redes Sociales:</b></legend>
 
@@ -15,13 +12,13 @@ echo'
                 </div>
                 <select id="formFbSuc" name="formFbSuc" class="custom-select" onchange="getFb();">
                     <option value="" selected disabled>Seleccione</option>
-';
-$list = "SELECT * FROM tab_facebook";
-$rs = mysqli_query($con, $list) or die("Error de consulta");
-while ($item = mysqli_fetch_array($rs)) {
-    echo '<option value="' . $item["Sucursal"] . '">' . $item["Sucursal"] . '</option>';
-}
-echo '
+                    <?php
+                    $list = "SELECT * FROM tab_facebook";
+                    $rs = mysqli_query($con, $list) or die("Error de consulta");
+                    while ($item = mysqli_fetch_array($rs)) {
+                        echo '<option value="' . $item["Sucursal"] . '">' . $item["Sucursal"] . '</option>';
+                    }
+                    ?>
                 </select>
             </div>
         </div>
@@ -102,5 +99,3 @@ echo '
         }
     </script>
 </fieldset>
-';
-?>

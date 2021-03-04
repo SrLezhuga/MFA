@@ -1,6 +1,6 @@
 <?php include("assets/controler/conexion.php"); ?>
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
 	<?php include("assets/common/header.php"); ?>
@@ -80,83 +80,56 @@
 					</div>
 					<br>
 
-					<div class="card shadow">
-						<h1 class="card-title"><b>Agente de Ventas</b></h1>
-						<div class="card-body text-left">
 
-							<fieldset class='border p-2'>
-								<legend class='w-auto'><b>Descripción:</b></legend>
-								<div class="row">
-									<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-										<p class="card-text">
-											Solicitamos agente de Atención a clientes y logística con conocimientos y experiencia en:
-											<br>● Paquetería Office
-											<br>● Manejo de ERP
-											<br>● Facturación
-											<br>● Flecha
-										</p>
+					<!-- Carusel/slider marcas -->
+					<div class="carousel" data-flickity='{ "draggable": true,
+							"autoPlay": true,
+							"bgLazyLoad": true,
+							"autoPlay": 5000,
+							"freeScroll": true,
+							"wrapAround": true,
+							"contain": true,
+							"prevNextButtons": false,
+							"adaptiveHeight": true,
+							"pageDots": true}'>
+
+						<?php
+						$queryVacantes = "SELECT * FROM tab_vacantes WHERE visible = 'true'";
+						$rsVacantes = mysqli_query($con, $queryVacantes) or die("Error de consulta");
+						while ($Vacantes = mysqli_fetch_array($rsVacantes)) {
+							echo '
+							<div class="carousel-vacantes">
+							<div class="card shadow">
+								<h1 class="card-title"><b>' . $Vacantes['vacante'] . '</b></h1>
+								<div class="card-body text-left">
+									<div class="row">
+										<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+											<fieldset>
+												<legend class="w-auto"><b>Requisitos:</b></legend>
+												<p class="card-text">' . nl2br($Vacantes['requisitos']) . '</p>
+											</fieldset>
+										</div>
+										<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+											<img class="img-suc-web" src="assets/img/vacantes/' . $Vacantes['img'] . '" style="width: 100%;">
+										</div>
+										<div class="col-12">
+											<fieldset>
+												<legend class="w-auto"><b>Ofrecemos:</b></legend>
+												<p class="card-text">' . nl2br($Vacantes['ofrecemos']) . '</p>
+											</fieldset>
+										</div>
 									</div>
-									<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-										<img class="img-suc-web" src="assets/img/vacantes/placeholder.jpg" style="width: 100%;">
-									</div>
+									<center>
+										<button type="button" class="btn btn-outline-danger mt-2 BtnVacante" data-toggle="modal" data-target="#modalVacante" value="' . $Vacantes['Id'] . '">
+											<i class="far fa-thumbs-up"></i> Postularme
+										</button>
+									</center>
 								</div>
-
-
-
-							</fieldset>
-
-							<button class="btn btn-outline-light text-dark  btn-block " data-toggle="collapse" data-target="#demo"><i class="fas fa-angle-down"></i> Ver más información</button>
-
-							<div id="demo" class="collapse">
-								<fieldset class='border p-2'>
-									<legend class='w-auto'><b>Requisitos:</b></legend>
-
-									<p class="card-text">
-										<b>SEXO: </b>Ambos
-										<br><b>EDAD: </b>20 - 45 años
-										<br><b>ESCOLARIDAD: </b>Licenciatura en administración o afin
-										<br><b>EXPERIENCIA: </b>Experiencia mínima de 2 años en puesto similar
-									</p>
-
-								</fieldset>
-								<fieldset class='border p-2'>
-									<legend class='w-auto'><b>Ofrecemos:</b></legend>
-
-									<p class="card-text">
-										<b>SUELDO: </b> $ 1,200, mas bonos y comisiones
-										<br><b>BENEFICIOS: </b>Prestaciones de ley, Caja de ahorro, Vacaciones, Aguinaldo
-										<br><b>HORARIO: </b> L - V 8:30 a 6:30, S 8:30 a 2:00
-										<br><b>LUGAR DE TRABAJO: </b>Sucursal Milwaukee
-									</p>
-
-								</fieldset>
-								<fieldset class='border p-2'>
-									<legend class='w-auto'><b>Observaciones:</b></legend>
-
-									<p class="card-text">
-
-										Experiencia deseable en ventas
-										<br>Facilidad de Palabra
-										<br>Buena Presentación
-										<br>Prospección de Clientes
-										<br>Seguimiento de Cartera
-										<br>Asesoría Personalizada
-										<br>Cotizaciones
-										<br>Cierre de Venta
-
-									</p>
-
-								</fieldset>
 							</div>
-							<center>
-								<!-- Button to Open the Modal -->
-								<button type="button" class="btn btn-outline-danger mt-2" data-toggle="modal" data-target="#Postular">
-									<i class="far fa-thumbs-up"></i> Postularme
-								</button>
-
-							</center>
 						</div>
-
+							';
+						}
+						?>
 					</div>
 
 				</div>
@@ -165,43 +138,35 @@
 			<!-- Section 5 -->
 			<div class="section-5-container section-container" id="section-5" style="border-top: 5px solid #dc3545!important;">
 				<div class="container">
-				<div class="card bg-secondary" style="top: -55px;">
+					<div class="card bg-secondary" style="top: -55px;">
 						<div class="card-body">
 							<h1 class="display-3 text-white">RECURSOS HUMANOS</h1>
 						</div>
 					</div>
 					<div class="row">
+						<?php
+						$queryRC = "SELECT * FROM tab_rrhh";
+						$rsRC = mysqli_query($con, $queryRC) or die("Error de consulta");
+						while ($RC = mysqli_fetch_array($rsRC)) {
+							echo '
+							<div class="col-lg-6 col-md-6 col-sm-12 wow  slideInUp">
+								<p><i class="fas fa-user"></i> ' . $RC['nombre'] . '
+									<br><a href="mailto:' . $RC['correo'] . '"><i class="far fa-envelope"></i> ' . $RC['correo'] . '</a>
+									<br><a href="tel:' . str_replace(" ", "", $RC['telefono']) . '"><i class="fas fa-mobile-alt"></i> ' . $RC['telefono'] . '</a>
+								</p>
+								<a href="https://wa.me/52' . str_replace(" ", "", $RC['telefono']) . '?text=' . str_replace(" ", "%20", $RC['wp_txt']) . '" target="_blank">
+									<img alt="Whatsapp" src="assets/img/whatsapp.png" style="width: 250px; height: auto;">
+								</a>
+								<br>
+								<a href="' . $RC['fb'] . '" target="_blank">
+									<img alt="RH Ferretero" src="assets/img/facebook.png" style="width: 250px; height: auto;">
+								</a>
+							</div>
 
+							';
+						}
 
-
-
-						<div class="col-lg-6 col-md-6 col-sm-12 wow  slideInLeft">
-							<p><i class="fas fa-user"></i> Lic. Carlos Grajeda
-								<br><a href="mailto:karlos@mayoreoferreteroatlas.com"><i class="far fa-envelope"></i> karlos@mayoreoferreteroatlas.com</a>
-								<br><a href="tel:3318888437"><i class="fas fa-mobile-alt"></i> 33 1888 8437</a>
-							</p>
-							<a href="https://api.whatsapp.com/send?phone=523329724073" target="_blank">
-								<img alt="Whatsapp" src="assets/img/whatsapp.png" style="width: 250px; height: auto;">
-							</a>
-							<br>
-							<a href="https://www.messenger.com/t/100040982919290/" target="_blank">
-								<img alt="RH Ferretero" src="assets/img/facebook.png" style="width: 250px; height: auto;">
-							</a>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-12 wow  slideInRight">
-							<p><i class="fas fa-user"></i> Lic. Stephany Lopez
-								<br><a href="mailto:fany@mayoreoferreteroatlas.com"><i class="far fa-envelope"></i> fany@mayoreoferreteroatlas.com</a>
-								<br><a href="tel:3329724073"><i class="fas fa-mobile-alt"></i> 33 2972 4073</a>
-							</p>
-							<a href="https://api.whatsapp.com/send?phone=523329724073" target="_blank">
-								<img alt="Whatsapp" src="assets/img/whatsapp.png" style="width: 250px; height: auto;">
-							</a>
-							<br>
-							<a href="https://www.messenger.com/t/100055884110792/" target="_blank">
-								<img alt="Atlas Tools" src="assets/img/facebook.png" style="width: 250px; height: auto;">
-							</a>
-						</div>
-
+						?>
 					</div>
 				</div>
 			</div>
@@ -230,64 +195,33 @@
 	</div>
 	<!-- End wrapper -->
 
+
 </body>
 
 </html>
 
-
-<!-- Modal -->
-<div id="Postular" class="modal fade" role="dialog">
+<!-- The Modal -->
+<div class="modal fade" id="modalVacante">
 	<div class="modal-dialog modal-sm">
-		<!-- Modal content-->
 		<div class="modal-content border-left-danger shadow">
-			<div class="modal-body">
-
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h1 class="modal-title text-center h4 text-gray-900 "><b>Agente de Ventas</b></h1>
-
-				<div class="card-color">
-
-
-
-					<div class="p-4">
-						<form class="user" action="#" method="POST">
-							<label>Nombre:</label>
-							<div class="input-group ">
-								<div class="input-group-prepend">
-									<span class="input-group-text">
-										<i class="fas fa-user-alt"></i>
-									</span>
-								</div>
-								<input type="text" class="form-control" name="formUser" placeholder="Nombre" required>
-							</div>
-
-
-
-							<label>Teléfono:</label>
-							<div class="input-group ">
-								<div class="input-group-prepend">
-									<span class="input-group-text">
-										<i class="fas fa-phone"></i>
-									</span>
-								</div>
-								<input type="number" class="form-control" name="formPass" placeholder="Teléfono" required>
-							</div>
-
-
-							<label>Currículum:</label>
-
-							<div class="form-group inputDnD">
-								<input type="file" class="form-control-file text-danger font-weight-bold" id="inputFile" onchange="readUrl(this)" data-title="Drag and drop a file">
-							</div>
-
-
-							<br>
-							<button type="submit" class="btn btn-outline-danger btn-block btn-lg"><i class="fas fa-file-pdf"></i> Enviar Currículum</button>
-						</form>
-					</div>
-				</div>
-			</div>
+			<div class="getVacante"></div>
 		</div>
-
 	</div>
 </div>
+
+<script type="text/javascript">
+	// Modal tarjeta Orden
+
+	$('.BtnVacante').on('click', function() {
+		var id_button = $(this).val();
+		$('.getVacante').load('./assets/controler/vacante/getvacante.php?id=' + id_button, function() {
+			$('#modalVacante').modal({
+				show: true
+			});
+		});
+	});
+
+	$(document).ready(function() {
+		$('[data-toggle="tooltip"]').tooltip();
+	});
+</script>

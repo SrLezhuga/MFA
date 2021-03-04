@@ -7,7 +7,7 @@ $Web = mysqli_fetch_array($rsWeb);
 
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
 	<?php include("assets/common/header.php"); ?>
@@ -101,7 +101,7 @@ $Web = mysqli_fetch_array($rsWeb);
 											echo '
 										<div class="carousel-categorias">
 											<div class="caja_8">
-											<img src="assets/img/' . $Sucursal . '/categorias/' . $Categoria['Img'] . '" alt="' . $Categoria['Desc'] . '">
+											<img src=" assets/img/categorias/' . $Categoria['Img'] . '" alt="' . $Categoria['Desc'] . '">
 												<div class="ovrly"></div>
 												<div class="buttons">
 													<a class="fa" href="' . $Categoria['Href'] . '" target="_blank"><button type="button" class="btn btn-danger">
@@ -160,7 +160,7 @@ $Web = mysqli_fetch_array($rsWeb);
 										while ($Catalogo = mysqli_fetch_array($rsCatalogo)) {
 											echo '
 										<div class="carousel-catalogos">
-											<center><a href="' . $Catalogo['href'] . '" target="_blank"><img src="assets/img/' . $Sucursal . '/catalogo/' . $Catalogo['img'] . '" width="80%" class="img-responsive"></a></center>
+											<center><a href="' . $Catalogo['href'] . '" target="_blank"><img src="assets/img/catalogos/' . $Catalogo['img'] . '" width="80%" class="img-responsive"></a></center>
 											<span class="count-description">' . $Catalogo['desc'] . '</span>
 										</div>
 										';
@@ -303,18 +303,7 @@ $Web = mysqli_fetch_array($rsWeb);
 												<img src="assets/img/' . $Galeria['Sucursal'] . './galeria/' . $Galeria['Img7'] . '" style="width:100%; height: 250px; border-radius: 15px;">
 											</div>';
 										}
-										if ($Galeria['Img8'] != null) {
-											echo '
-											<div class="carousel-galeria">
-												<img src="assets/img/' . $Galeria['Sucursal'] . './galeria/' . $Galeria['Img8'] . '" style="width:100%; height: 250px; border-radius: 15px;">
-											</div>';
-										}
-										if ($Galeria['Img9'] != null) {
-											echo '
-											<div class="carousel-galeria">
-												<img src="assets/img/' . $Galeria['Sucursal'] . './galeria/' . $Galeria['Img9'] . '" style="width:100%; height: 250px; border-radius: 15px;">
-											</div>';
-										}
+									 
 
 										?>
 									</div>

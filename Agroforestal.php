@@ -7,7 +7,7 @@ $Web = mysqli_fetch_array($rsWeb);
 
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
 	<?php include("assets/common/header.php"); ?>
@@ -38,8 +38,8 @@ $Web = mysqli_fetch_array($rsWeb);
 									<a>
 										<img <?php echo 'src="assets/img/' . $Sucursal . '/' . $Web['Img_logo'] . '"'; ?> class="img-fluid mx-auto d-block logo-miilwaukee">
 									</a>
-									<h1 class="wow  slideInDown" style="visibility: visible; animation-name: slideInDown;"><b><?php echo $Web['Titulo']; ?></b></h1>
-									<p class="lead intro-text wow  slideInUp" style="visibility: visible; color: white; animation-name: slideInUp;"><?php echo $Web['Sub_titulo']; ?></p>
+									<h1 class="wow  slideInDown" style="visibility: visible; color: black; animation-name: slideInDown;"><b><?php echo $Web['Titulo']; ?></b></h1>
+									<p class="lead intro-text wow  slideInUp" style="visibility: visible; color: black; animation-name: slideInUp;"><?php echo $Web['Sub_titulo']; ?></p>
 								</div>
 							</div>
 
@@ -96,13 +96,13 @@ $Web = mysqli_fetch_array($rsWeb);
 									"pageDots": true}'>
 
 										<?php
-										$queryCategoria = "SELECT * FROM tab_categoria WHERE Sucursal = '" . $Sucursal . "'";
+										$queryCategoria = "SELECT * FROM tab_categoria WHERE Sucursal = 'Atlas'";
 										$rsCategoria = mysqli_query($con, $queryCategoria) or die("Error de consulta");
 										while ($Categoria = mysqli_fetch_array($rsCategoria)) {
 											echo '
 										<div class="carousel-categorias">
 											<div class="caja_8">
-											<img src="assets/img/' . $Sucursal . '/categorias/' . $Categoria['Img'] . '" alt="' . $Categoria['Desc'] . '">
+											<img src=" assets/img/categorias/' . $Categoria['Img'] . '" alt="' . $Categoria['Desc'] . '">
 												<div class="ovrly"></div>
 												<div class="buttons">
 													<a class="fa" href="' . $Categoria['Href'] . '" target="_blank"><button type="button" class="btn btn-danger">
@@ -157,12 +157,12 @@ $Web = mysqli_fetch_array($rsWeb);
 									"pageDots": true}'>
 
 										<?php
-										$queryCatalogo = "SELECT * FROM tab_catalogo WHERE Sucursal ='" . $Sucursal . "'";
+										$queryCatalogo = "SELECT * FROM tab_catalogo WHERE Sucursal ='Atlas'";
 										$rsCatalogo = mysqli_query($con, $queryCatalogo) or die("Error de consulta");
 										while ($Catalogo = mysqli_fetch_array($rsCatalogo)) {
 											echo '
 										<div class="carousel-catalogos">
-											<center><a href="' . $Catalogo['href'] . '" target="_blank"><img src="assets/img/' . $Sucursal . '/catalogo/' . $Catalogo['img'] . '" width="80%" class="img-responsive"></a></center>
+											<center><a href="' . $Catalogo['href'] . '" target="_blank"><img src="assets/img/catalogos/' . $Catalogo['img'] . '" width="80%" class="img-responsive"></a></center>
 											<span class="count-description">' . $Catalogo['desc'] . '</span>
 										</div>
 										';
@@ -305,18 +305,7 @@ $Web = mysqli_fetch_array($rsWeb);
 												<img src="assets/img/' . $Galeria['Sucursal'] . './galeria/' . $Galeria['Img7'] . '" style="width:100%; height: 250px; border-radius: 15px;">
 											</div>';
 										}
-										if ($Galeria['Img8'] != null) {
-											echo '
-											<div class="carousel-galeria">
-												<img src="assets/img/' . $Galeria['Sucursal'] . './galeria/' . $Galeria['Img8'] . '" style="width:100%; height: 250px; border-radius: 15px;">
-											</div>';
-										}
-										if ($Galeria['Img9'] != null) {
-											echo '
-											<div class="carousel-galeria">
-												<img src="assets/img/' . $Galeria['Sucursal'] . './galeria/' . $Galeria['Img9'] . '" style="width:100%; height: 250px; border-radius: 15px;">
-											</div>';
-										}
+									 
 
 										?>
 									</div>

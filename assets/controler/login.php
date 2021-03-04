@@ -1,31 +1,22 @@
 <?php
-/*
 include "conexion.php";
 
 $user      = $_POST['formUser'];
 $password  = $_POST['formPass'];
-$user_id   = 0;
 
-$encry=sha1($password);
-$sql        =  "SELECT * FROM tab_users WHERE nick_user= '$user' AND pass_user = '$encry'";
+$encry = sha1($password);
+$sql        =  "SELECT * FROM tab_login WHERE User= '$user' AND Pass = '$encry'";
 $query      =  $con->query($sql);
 $rs         =  $query->fetch_array();
-$user_id    =  $rs['code_user'];
-$items      =  $rs['conf_user'];
-$avatar     =  "assets/img/Avatar/".$items.".png";
+$priv_user  =  $rs['Priv'];
+$type_user  =  $rs['User'];
 
-if ($user_id == 0) {
-    header("Location: http://" . $base_url . "/CentroServicio/index?alert=1");
+if ($priv_user == "Admin") {
+    header("Location: http://" . $base_url . "/mfa/Administrar");
+} elseif ($priv_user == "RH") {
+    header("Location: http://" . $base_url . "/mfa/Reclutamiento");
 } else {
-    session_start();
-    $_SESSION['priv_user'] = $rs['priv_user'];
-    $_SESSION['name_user'] = $rs['name_user'];
-    $_SESSION['code_user'] = $user_id;
-    $_SESSION['avatar']    = $avatar;
-    header("Location: http://" . $base_url . "/CentroServicio/inicio");
+    header("Location: http://" . $base_url . "/mfa/404");
 }
 
 mysqli_close($con);
-*/
-header("Location: http://localhost/mfa/admin");
-?>

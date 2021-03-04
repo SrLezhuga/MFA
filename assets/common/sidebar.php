@@ -55,7 +55,7 @@
             <a href="index#section-5"><i class="fas fa-share-alt"></i> Redes Sociales</a>
         </li>
         <li>
-            <a href="#"><i class="fas fa-child"></i> Acerca de Nosotros</a>
+            <a href="Nosotros"><i class="fas fa-child"></i> Acerca de Nosotros</a>
         </li>
         <li>
             <a href="index#section-4"><i class="fas fa-map-marker-alt"></i> Directorio</a>
