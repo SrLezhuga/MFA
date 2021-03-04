@@ -20,20 +20,20 @@ if ($jsonResponse->success === true) {
     $password  = $_POST['formPass'];
 
     $encry = sha1($password);
-    $sql        =  "SELECT * FROM tab_login WHERE User= '$user' AND Pass = '$encry'";
-    $query      =  $con->query($sql);
-    $rs         =  $query->fetch_array();
-    echo $priv_user  =  $rs['Priv'];
-    echo $type_user  =  $rs['User'];
+    $sql        =  "SELECT Priv FROM tab_login WHERE User= '$user' AND Pass = '$encry'";
 
     if ($con->query($sql)) {
-        echo "consulta ok";
+
+        $query      =  $con->query($sql);
+        $rs         =  $query->fetch_array();
+        $priv_user  =  $rs['Priv'];
+
         if ($priv_user == "Admin") {
-            header("Location: https://mayoreoferreteroatlas.com/mfa/Administrar");
+            header("Location: https://mayoreoferreteroatlas.com/mfa/Administrar.php");
         } elseif ($priv_user == "RH") {
-            header("Location: https://mayoreoferreteroatlas.com/mfa/Reclutamiento");
+            header("Location: https://mayoreoferreteroatlas.com/mfa/Reclutamiento.php");
         } else {
-            header("Location: https://mayoreoferreteroatlas.com/mfa/500");
+            header("Location: https://mayoreoferreteroatlas.com/mfa/500.php");
         }
     }
 
