@@ -7,7 +7,7 @@ $password="";
 $db="";*/
 
 //LOCAL
-$host     = "127.0.0.1";
+$host     = "localhost";
 $user     = "mayoreof_Mfa_2021";
 $password = "mPH7#)So[4n%";
 $db       = "mfa_web";
@@ -17,6 +17,6 @@ mysqli_set_charset($con, 'utf8');
 $db = mysqli_select_db($con, $db) or die("Upps! Pues va a ser que no se ha podido conectar a la base de datos");
 $con->query("set names utf8");
 
-$base_url="127.0.0.1";
+$base_url="localhost";
 
 ?>
