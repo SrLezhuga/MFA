@@ -12,14 +12,14 @@
         <div class="modal-content border-left-danger shadow">
             <div class="modal-body">
                 <center>
-                    <img src="assets\img\logo\logo.webp" class="mx-auto d-block" style="width: 75%;" onContextMenu="return false;" draggable="false" />
+                    <img src="assets\img\logo\logo.webp" class="mx-auto d-block" style="width: 40%;" onContextMenu="return false;" draggable="false" />
                 </center>
-                <h1 class="modal-title text-center h4 text-gray-900 "><b>Mayoreo Ferretero</b></h1>
+                <h1 class="modal-title text-center h3 text-gray-900 "><b>Mayoreo Ferretero</b></h1>
                 <br>
                 <div class="row card-color">
 
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="p-4">
+                        <div class="p-3">
 
 
                             <script src='https://www.google.com/recaptcha/api.js?render=6Len7XEaAAAAAI2kAiuOVG-p8YQUajHe8jo9WQ35'>
