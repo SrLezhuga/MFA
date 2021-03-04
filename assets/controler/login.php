@@ -29,15 +29,15 @@ if ($jsonResponse->success === true) {
         $priv_user  =  $rs['Priv'];
 
         if ($priv_user == "Admin") {
-            header("Location: Administrar");
+            header("Location: ../../Administrar");
         } elseif ($priv_user == "RH") {
-            header("Location: Reclutamiento");
+            header("Location: ../../Reclutamiento");
         } else {
-            header("Location: 500");
+            header("Location: ../../500");
         }
     }
 
     mysqli_close($con);
 } else {
-    header("Location: 404");
+    header("Location: ../../404");
 }
