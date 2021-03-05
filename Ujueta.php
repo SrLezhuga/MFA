@@ -96,7 +96,7 @@ $Web = mysqli_fetch_array($rsWeb);
 									"pageDots": true}'>
 
 										<?php
-										$queryCategoria = "SELECT * FROM tab_categoria WHERE Sucursal = 'Atlas'";
+										$queryCategoria = "SELECT * FROM tab_categoria WHERE Sucursal = '" . $Sucursal . "'";
 										$rsCategoria = mysqli_query($con, $queryCategoria) or die("Error de consulta");
 										while ($Categoria = mysqli_fetch_array($rsCategoria)) {
 											echo '
