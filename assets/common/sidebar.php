@@ -15,7 +15,7 @@
 
     <ul class="list-unstyled menu-elements">
         <li class="active">
-            <a href="shop"><i class="fas fa-shopping-cart"></i> Tienda en Linea</a>
+            <a href="https://mechanicshop.com.mx/"><i class="fas fa-shopping-cart"></i> Tienda en Linea</a>
         </li>
         <li>
             <a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">

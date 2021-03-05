@@ -68,7 +68,7 @@
 								<div class="col-lg-10 col-sm-12">
 									<h2 class="white wow  slideInRight">Visita nuestra tienda en linea!</h2>
 									<br>
-									<a href="#" class="btn btn-outline-danger btn-block btn-lg wow  slideInRight" role="button">
+									<a href="https://mechanicshop.com.mx/" class="btn btn-outline-danger btn-block btn-lg wow  slideInRight" role="button">
 										<i class="fas fa-shopping-cart"></i> Ir a la tienda</a>
 
 
