@@ -56,7 +56,7 @@
                             <i class="fas fa-store"></i>
                         </span>
                     </div>
-                    <select id="listCategoria" name="formCategoria" class="custom-select" style="visibility:visible;">
+                    <select id="listCategoria" name="listCategoria" class="custom-select" style="visibility:visible;">
                         <option value="" selected disabled>Seleccione</option>
                         <?php
                         $list = "SELECT DISTINCT Sucursal FROM tab_categoria";
