@@ -137,7 +137,7 @@
 
 
 					<!-- Blog -->
-			
+
 
 				</div>
 			</div>
@@ -258,7 +258,7 @@
 								?>
 							</div>
 						</div>
-						<div class="col-md-6 col-sm-12 col-lg-6 offset-lg-3 offset-md-3" style="top: 35px; margin-bottom: 45px;">
+						<div class="col-md-6 col-sm-12 col-lg-6" style="top: 35px; margin-bottom: 45px;">
 
 							<?php
 							$queryFacebook = "SELECT * FROM tab_facebook WHERE Sucursal = 'Mayoreo'";
@@ -270,6 +270,11 @@
 							}
 							?>
 
+						</div>
+						<div class="col-md-6 col-sm-12 col-lg-6" style="top: 35px; margin-bottom: 45px;">
+							<a href="Bolsa">
+								<img src="assets/img/bolsa.png" class="img-fluid mx-auto d-block" style="width: 340px; height: 130px;">
+							</a>
 						</div>
 
 					</div>

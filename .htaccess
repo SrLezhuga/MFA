@@ -16,3 +16,24 @@ RewriteRule ^(.*)$ $1.html
 ErrorDocument 404 https://mayoreoferreteroatlas.com/mfa/404
 ErrorDocument 500 https://mayoreoferreteroatlas.com/mfa/500
 </IfModule>
+
+#Cache de imágenes en el navegador durante un mes
+
+<FilesMatch "\.(ico|jpg|jpeg|png|gif)$">
+Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
+
+# sirve archivos foo como archivos php
+
+AddType application/x-httpd-php .foo
+
+#evitar listado de directorios
+
+IndexIgnore *
+
+#prevenir acceso a los archivos .htaccess
+
+<files .htaccess>
+order allow,deny
+deny from all
+</files>
