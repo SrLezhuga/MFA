@@ -58,7 +58,7 @@
             <a href="Nosotros"><i class="fas fa-child"></i> Acerca de Nosotros</a>
         </li>
         <li>
-            <a href="index#section-4"><i class="fas fa-map-marker-alt"></i> Directorio</a>
+            <a href="Directorio"><i class="fas fa-map-marker-alt"></i> Directorio</a>
         </li>
         <li>
             <a href="Bolsa"><i class="fas fa-address-book"></i> Bolsa de Trabajo</a>
