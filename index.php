@@ -57,9 +57,9 @@
 					<div class="card bg-light text-dark shadow mb-3 mt-3">
 						<div class="card-body">
 
+							<img src="assets/img/bg.jpg">
 							<div class="row">
 								<div class="col-lg-2 col-sm-12">
-
 									<a>
 										<img src="assets/img/logo/logo.png" class="img-fluid mx-auto d-block logo-shop wow  slideInLeft">
 									</a>
@@ -302,7 +302,7 @@
 						while ($Marcas = mysqli_fetch_array($rsMarcas)) {
 							echo '
 									<div class="carousel-marca">
-										<a href="' . $Marcas['Link'] . '">
+										<a href="' . $Marcas['Link'] . '" target="_blank">
 											<img border="0" src="assets/img/marcas/' . $Marcas['Img_url'] . '" alt="' . $Marcas['Nombre'] . '" title="' . $Marcas['Nombre'] . '" width="100%" height="auto">
 										</a>
 									</div>
