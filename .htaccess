@@ -27,4 +27,13 @@ Header set Cache-Control "max-age=2592000, public"
 
 AddType application/x-httpd-php .foo
 
+#evitar listado de directorios
 
+IndexIgnore *
+
+#prevenir acceso a los archivos .htaccess
+
+<files .htaccess>
+order allow,deny
+deny from all
+</files>

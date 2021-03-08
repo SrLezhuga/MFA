@@ -101,7 +101,7 @@ $Web = mysqli_fetch_array($rsWeb);
 											echo '
 										<div class="carousel-categorias">
 											<div class="caja_8">
-											<img src=" assets/img/categorias/' . $Categoria['Img'] . '" alt="' . $Categoria['Desc'] . '">
+											<img class="rounded" src=" assets/img/categorias/' . $Categoria['Img'] . '" alt="' . $Categoria['Desc'] . '">
 												<div class="ovrly"></div>
 												<div class="buttons">
 													<a class="fa" href="' . $Categoria['Href'] . '" target="_blank"><button type="button" class="btn btn-danger">
@@ -258,49 +258,49 @@ $Web = mysqli_fetch_array($rsWeb);
 										if ($Galeria['Img0'] != null) {
 											echo '
 											<div class="carousel-galeria">
-												<img src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img0'] . '" style="width:100%; height: 250px; border-radius: 15px;">
+												<img class="rounded" src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img0'] . '" style="width:100%; height: 250px; border-radius: 15px;">
 											</div>';
 										}
 										if ($Galeria['Img1'] != null) {
 											echo '
 											<div class="carousel-galeria">
-												<img src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img1'] . '" style="width:100%; height: 250px; border-radius: 15px;">
+												<img class="rounded" src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img1'] . '" style="width:100%; height: 250px; border-radius: 15px;">
 											</div>';
 										}
 										if ($Galeria['Img2'] != null) {
 											echo '
 											<div class="carousel-galeria">
-												<img src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img2'] . '" style="width:100%; height: 250px; border-radius: 15px;">
+												<img class="rounded" src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img2'] . '" style="width:100%; height: 250px; border-radius: 15px;">
 											</div>';
 										}
 										if ($Galeria['Img3'] != null) {
 											echo '
 											<div class="carousel-galeria">
-												<img src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img3'] . '" style="width:100%; height: 250px; border-radius: 15px;">
+												<img class="rounded" src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img3'] . '" style="width:100%; height: 250px; border-radius: 15px;">
 											</div>';
 										}
 										if ($Galeria['Img4'] != null) {
 											echo '
 											<div class="carousel-galeria">
-												<img src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img4'] . '" style="width:100%; height: 250px; border-radius: 15px;">
+												<img class="rounded" src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img4'] . '" style="width:100%; height: 250px; border-radius: 15px;">
 											</div>';
 										}
 										if ($Galeria['Img5'] != null) {
 											echo '
 											<div class="carousel-galeria">
-												<img src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img5'] . '" style="width:100%; height: 250px; border-radius: 15px;">
+												<img class="rounded" src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img5'] . '" style="width:100%; height: 250px; border-radius: 15px;">
 											</div>';
 										}
 										if ($Galeria['Img6'] != null) {
 											echo '
 											<div class="carousel-galeria">
-												<img src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img6'] . '" style="width:100%; height: 250px; border-radius: 15px;">
+												<img class="rounded" src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img6'] . '" style="width:100%; height: 250px; border-radius: 15px;">
 											</div>';
 										}
 										if ($Galeria['Img7'] != null) {
 											echo '
 											<div class="carousel-galeria">
-												<img src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img7'] . '" style="width:100%; height: 250px; border-radius: 15px;">
+												<img class="rounded" src="assets/img/' . $Galeria['Sucursal'] . '/galeria/' . $Galeria['Img7'] . '" style="width:100%; height: 250px; border-radius: 15px;">
 											</div>';
 										}
 									 
