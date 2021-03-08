@@ -1,7 +1,3 @@
-<?php
-$comita="'";
-echo '
-
 <fieldset class="border p-2">
     <legend class="w-auto"><b>Sociales:</b></legend>
 
@@ -16,13 +12,13 @@ echo '
                 </div>
                 <select id="formwebSuc" name="formwebSuc" class="custom-select" onchange="getWeb();">
                     <option value="" selected disabled>Seleccione</option>
-';
+<?php
                     $list = "SELECT * FROM tab_web";
                     $rs = mysqli_query($con, $list) or die("Error de consulta");
                     while ($item = mysqli_fetch_array($rs)) {
                         echo '<option value="' . $item["Sucursal"] . '">' . $item["Sucursal"] . '</option>';
                     }
-echo '
+?>
                 </select>
             </div>
         </div>
@@ -85,14 +81,14 @@ echo '
         <div class="col-6">
             <label>Imagen Logo:</label>
             <div class="file-field">
-                <img class="img-logo-web" src="assets/img/upload.gif" onerror="this.src='.$comita.'assets/img/upload.gif'.$comita.';" height="auto" width="100%">
+                <img class="img-logo-web" src="assets/img/upload.gif" onerror="this.src='assets/img/upload.gif';" height="auto" width="100%">
                 <input type="file" id="img_logo" class="fileo .fileInput3">
             </div>
         </div>
         <div class="col-6">
             <label>Imagen Sucursal:</label>
             <div class="file-field">
-                <img class="img-suc-web" src="assets/img/upload.gif" onerror="this.src='.$comita.'assets/img/upload.gif'.$comita.';" height="auto" width="100%">
+                <img class="img-suc-web" src="assets/img/upload.gif" onerror="this.src='assets/img/upload.gif';" height="auto" width="100%">
                 <input type="file" id="img_suc" class="fileo .fileInput3">
             </div>
         </div>
@@ -179,6 +175,3 @@ echo '
         }
     </script>
 </fieldset>
-
-';
-?>

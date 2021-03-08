@@ -112,7 +112,7 @@
 
 	</div>
 	<!-- End wrapper -->
-	<script type="text/javascript">
+	<script type="text/javascript"> 
 		$(function() {
 
 			//banner 1
@@ -140,7 +140,7 @@
 					reader.onload = function(e) {
 						$('.img-logo-web').attr('src', e.target.result);
 					}
-					reader.readAsDataURL(input.files[0]);
+					reader.readAsDataURL(input.files[0]); 
 				} else {
 					$('.img-logo-web').attr('src', 'assets/img/upload.gif');
 				}
@@ -161,18 +161,18 @@
 				}
 			});
 			//promocion 1
-			$('#imgVacante').change(function() {
+			$('#imgPromocion').change(function() {
 				var input = this;
 				var url = $(this).val();
 				var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
 				if (input.files && input.files[0] && (ext == "webp" || ext == "png" || ext == "jpeg" || ext == "jpg")) {
 					var reader = new FileReader();
 					reader.onload = function(e) {
-						$('.img-vacante').attr('src', e.target.result);
+						$('.img-promocion').attr('src', e.target.result);
 					}
 					reader.readAsDataURL(input.files[0]);
 				} else {
-					$('.img-vacante').attr('src', 'assets/img/upload.gif');
+					$('.img-promocion').attr('src', 'assets/img/upload.gif');
 				}
 			});
 			//galeria 1

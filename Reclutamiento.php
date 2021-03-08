@@ -175,6 +175,30 @@
 		});
 	</script>
 
-</body>
+<script type="text/javascript">
+		$(function() {	
+			//vacante
+			$('#imgVacante').change(function() {
+				var input = this;
+				var url = $(this).val();
+				var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+				if (input.files && input.files[0] && (ext == "webp" || ext == "png" || ext == "jpeg" || ext == "jpg")) {
+					var reader = new FileReader();
+					reader.onload = function(e) {
+						$('.img-vacante').attr('src', e.target.result);
+					}
+					reader.readAsDataURL(input.files[0]);
+				} else {
+					$('.img-vacante').attr('src', 'assets/img/upload.gif');
+				}
+			});
+		});
+
+		$(document).ready(function() {
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+	</script>
+
+</body> 
 
 </html>

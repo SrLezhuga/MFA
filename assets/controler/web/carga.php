@@ -18,7 +18,7 @@ if (!empty($_FILES['img_logo']['name'])) {
 
     $img_logo = $_FILES['img_logo']['name'];
 
-    if (($_FILES["img_logo"]["type"] == "image/pjpeg")
+    if (($_FILES["img_logo"]["type"] == "image/jpg")
         || ($_FILES["img_logo"]["type"] == "image/jpeg")
         || ($_FILES["img_logo"]["type"] == "image/png")
         || ($_FILES["img_logo"]["type"] == "image/webp")
@@ -40,7 +40,7 @@ if (!empty($_FILES['img_suc']['name'])) {
 
     $img_suc = $_FILES['img_suc']['name'];
 
-    if (($_FILES["img_suc"]["type"] == "image/pjpeg")
+    if (($_FILES["img_suc"]["type"] == "image/jpg")
         || ($_FILES["img_suc"]["type"] == "image/jpeg")
         || ($_FILES["img_suc"]["type"] == "image/png")
         || ($_FILES["img_suc"]["type"] == "image/webp")
