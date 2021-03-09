@@ -29,7 +29,7 @@
 					</p>
 					<div class="row">
 						<div class="col-6">
-							<div class="card shadow" onclick="web()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+							<div class="card shadow" onclick="web()" style="margin-bottom: 3rem; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 								<h1>
 									<i class="fas fa-globe"></i>
 								</h1>
@@ -41,7 +41,7 @@
 							</div>
 						</div>
 						<div class="col-6">
-							<div class="card shadow" onclick="sucursal()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+							<div class="card shadow" onclick="sucursal()" style="margin-bottom: 3rem; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 								<h1>
 									<i class="fas fa-store"></i>
 								</h1>
@@ -53,7 +53,7 @@
 							</div>
 						</div>
 						<div class="col-6">
-							<div class="card shadow" onclick="catalogo()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+							<div class="card shadow" onclick="catalogo()" style="margin-bottom: 3rem; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 								<h1>
 									<i class="fas fa-book-open"></i>
 								</h1>
@@ -65,7 +65,7 @@
 							</div>
 						</div>
 						<div class="col-6">
-							<div class="card shadow" onclick="contacto()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+							<div class="card shadow" onclick="contacto()" style="margin-bottom: 3rem; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 								<h1>
 									<i class="fas fa-comments"></i>
 								</h1>
@@ -91,17 +91,33 @@
 		function web() {
 			window.open("https://mayoreoferreteroatlas.com/mfa", "_blank");
 		}
+
 		function sucursal() {
 			window.open("https://mayoreoferreteroatlas.com/mfa/DirectorioMovil");
 		}
+
 		function catalogo() {
 			window.open("https://mayoreoferreteroatlas.com/mfa/CatalogoMovil");
 		}
+
 		function contacto() {
 			window.open("https://mayoreoferreteroatlas.com/mfa/ContactoMovil");
 		}
 	</script>
-
+	<footer id="footer-container" style="position: absolute; left: 0; bottom: 0; width: 100%;">
+		<div class="copynote bg-dark text-white border border-right-0 border-bottom-0 border-left-0 " style="border-top: 5px solid #dc3545!important;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						© <script>
+							var f = new Date();
+							document.write(f.getFullYear());
+						</script> Mayoreo Ferretero.<br> Todos los derechos Reservados.
+					</div><!-- /.col-md-12 -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.copynote -->
+	</footer>
 	<div class="plus-button"></div>
 
 	<?php
