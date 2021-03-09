@@ -1,10 +1,12 @@
 <?php include("assets/controler/conexion.php"); ?>
 <!doctype html>
 <html lang="es">
+
 <head>
 	<?php include("assets/common/header.php"); ?>
 	<title>Mayoreo Ferretero | Directorio</title>
 </head>
+
 <body>
 	<!-- Wrapper -->
 	<div class="wrapper">
@@ -81,13 +83,25 @@
 								</h3>
 							</div>
 						</div>
+						<div class="col-6">
+							<div class="card shadow" onclick="bolsa()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+								<h1>
+									<i class="fas fa-comments"></i>
+								</h1>
+								<h3 class="card-title">
+									<b>
+										Reclutamiento
+									</b>
+								</h3>
+							</div>
+						</div>
 					</div>
 					<br>
 				</div>
 			</div>
 		</div>
 	</div>
-	<footer id="footer-container" >
+	<footer id="footer-container">
 		<div class="copynote bg-dark text-white border border-right-0 border-bottom-0 border-left-0 " style="border-top: 5px solid #dc3545!important;">
 			<div class="container">
 				<div class="row">
@@ -110,15 +124,23 @@
 		}
 
 		function sucursal() {
-			window.open("https://mayoreoferreteroatlas.com/mfa/DirectorioMovil");
+			window.open("https://mayoreoferreteroatlas.com/mfa/DirectorioMovil", "_self");
 		}
 
 		function catalogo() {
-			window.open("https://mayoreoferreteroatlas.com/mfa/CatalogoMovil");
+			window.open("https://mayoreoferreteroatlas.com/mfa/CatalogoMovil", "_self");
 		}
 
 		function contacto() {
-			window.open("https://mayoreoferreteroatlas.com/mfa/ContactoMovil");
+			window.open("https://mayoreoferreteroatlas.com/mfa/ContactoMovil", "_self");
+		}
+
+		function promociom() {
+			
+		}
+
+		function bolsa() {
+			window.open("https://mayoreoferreteroatlas.com/mfa/ContactoMovil", "_self");
 		}
 	</script>
 	<div class="plus-button"></div>
