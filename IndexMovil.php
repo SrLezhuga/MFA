@@ -1,22 +1,15 @@
 <?php include("assets/controler/conexion.php"); ?>
 <!doctype html>
 <html lang="es">
-
 <head>
 	<?php include("assets/common/header.php"); ?>
 	<title>Mayoreo Ferretero | Directorio</title>
 </head>
-
 <body>
-
 	<!-- Wrapper -->
 	<div class="wrapper">
-
 		<!-- Content -->
 		<div class="content">
-
-
-
 			<!-- Section 1 -->
 			<div class="section-1-container " id="section-1">
 				<div class="container">
@@ -92,10 +85,7 @@
 					<br>
 				</div>
 			</div>
-
 		</div>
-		<br>
-
 	</div>
 	<footer id="footer-container" >
 		<div class="copynote bg-dark text-white border border-right-0 border-bottom-0 border-left-0 " style="border-top: 5px solid #dc3545!important;">
