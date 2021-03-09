@@ -60,18 +60,16 @@
 							</div>
 						</div>
 						<div class="col-6">
-							<a class="link" href="DirectorioMovil">
-								<div class="card shadow" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
-									<h1>
-										<i class="fas fa-store"></i>
-									</h1>
-									<h3 class="card-title">
-										<b>
-											Sucursales
-										</b>
-									</h3>
-								</div>
-							</a>
+							<div class="card shadow" onclick="sucursal()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+								<h1>
+									<i class="fas fa-store"></i>
+								</h1>
+								<h3 class="card-title">
+									<b>
+										Sucursales
+									</b>
+								</h3>
+							</div>
 						</div>
 						<div class="col-6">
 							<a class="link" href="CatalogoMovil">
@@ -148,6 +146,10 @@
 	<script>
 		function promociom() {
 			$("#ModalPromociones").modal("toggle");
+		}
+
+		function sucursal() {
+			Android.showSucursal();
 		}
 	</script>
 	<div class="plus-button"></div>
