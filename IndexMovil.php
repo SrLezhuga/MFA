@@ -35,7 +35,7 @@
 					<div class="row">
 						<div class="col-6">
 							<a class="link" href="index" target="_blank">
-								<div class="card shadow" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+								<div class="card shadow" onclick="web()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-globe"></i>
 									</h1>
@@ -73,7 +73,7 @@
 						</div>
 						<div class="col-6">
 							<a class="link" href="CatalogoMovil">
-								<div class="card shadow" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+								<div class="card shadow" onclick="catalogo()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-book-open"></i>
 									</h1>
@@ -87,7 +87,7 @@
 						</div>
 						<div class="col-6">
 							<a class="link" href="ContactoMovil">
-								<div class="card shadow" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+								<div class="card shadow" onclick="contacto()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-comments"></i>
 									</h1>
@@ -101,7 +101,7 @@
 						</div>
 						<div class="col-6">
 							<a class="link" href="BolsaMovil">
-								<div class="card shadow" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+								<div class="card shadow" onclick="bolsa()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-user-graduate"></i>
 									</h1>
@@ -113,13 +113,6 @@
 								</div>
 							</a>
 						</div>
-						<input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
-
-						<script type="text/javascript">
-							function showAndroidToast(toast) {
-								Android.showToast(toast);
-							}
-						</script>
 					</div>
 					<br>
 				</div>
@@ -144,12 +137,28 @@
 	<!-- End content -->
 
 	<script>
+		function web() {
+			Android.showWeb();
+		}
+
 		function promociom() {
 			$("#ModalPromociones").modal("toggle");
 		}
 
 		function sucursal() {
 			Android.showSucursal();
+		}
+
+		function catalogo() {
+			Android.showCatalogo();
+		}
+
+		function contacto() {
+			Android.showContacto();
+		}
+
+		function bolsa() {
+			Android.showBolsa();
 		}
 	</script>
 	<div class="plus-button"></div>
