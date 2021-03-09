@@ -1365,3 +1365,8 @@ input[type=number] {
 .grecaptcha-badge {
     visibility: hidden;
 }
+
+.link {
+    color: black;
+    text-decoration: none;
+}
