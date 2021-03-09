@@ -142,6 +142,7 @@
 		}
 
 		function promociom() {
+			Android.showPromocion();
 			$("#ModalPromociones").modal("toggle");
 		}
 
