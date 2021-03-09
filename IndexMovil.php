@@ -22,14 +22,14 @@
 				<div class="container">
 					<br>
 					<a>
-						<img src="assets/img/logo/logo.png" class="img-fluid mx-auto d-block logo-mfa">
+						<img src="assets/img/logo/logo.png" class="img-fluid mx-auto d-block" style="max-width: 30% !important;">
 					</a>
 					<p class="lead">
 						<img src="assets/img/logo/logo-mfa.png" class="img-fluid mx-auto d-block">
 					</p>
 					<div class="row">
 						<div class="col-6">
-							<div class="card shadow" onclick="web()" style="margin-bottom: 3rem; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+							<div class="card shadow" onclick="web()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 								<h1>
 									<i class="fas fa-globe"></i>
 								</h1>
@@ -41,7 +41,19 @@
 							</div>
 						</div>
 						<div class="col-6">
-							<div class="card shadow" onclick="sucursal()" style="margin-bottom: 3rem; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+							<div class="card shadow" onclick="promociom()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+								<h1>
+									<i class="fas fa-search-dollar"></i>
+								</h1>
+								<h3 class="card-title">
+									<b>
+										Promociones
+									</b>
+								</h3>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="card shadow" onclick="sucursal()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 								<h1>
 									<i class="fas fa-store"></i>
 								</h1>
@@ -53,7 +65,7 @@
 							</div>
 						</div>
 						<div class="col-6">
-							<div class="card shadow" onclick="catalogo()" style="margin-bottom: 3rem; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+							<div class="card shadow" onclick="catalogo()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 								<h1>
 									<i class="fas fa-book-open"></i>
 								</h1>
@@ -65,7 +77,7 @@
 							</div>
 						</div>
 						<div class="col-6">
-							<div class="card shadow" onclick="contacto()" style="margin-bottom: 3rem; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+							<div class="card shadow" onclick="contacto()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 								<h1>
 									<i class="fas fa-comments"></i>
 								</h1>
