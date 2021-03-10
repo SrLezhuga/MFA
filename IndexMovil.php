@@ -72,46 +72,44 @@
 							</div>
 						</div>
 						<div class="col-6">
-							<a class="link" href="CatalogoMovil">
-								<div class="card shadow" onclick="catalogo()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
-									<h1>
-										<i class="fas fa-book-open"></i>
-									</h1>
-									<h3 class="card-title">
-										<b>
-											Catálogos
-										</b>
-									</h3>
-								</div>
-							</a>
+							<div class="card shadow" onclick="catalogo()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+								<h1>
+									<i class="fas fa-book-open"></i>
+								</h1>
+								<h3 class="card-title">
+									<b>
+										Catálogos
+									</b>
+								</h3>
+							</div>
+
 						</div>
 						<div class="col-6">
-							<a class="link" href="ContactoMovil">
-								<div class="card shadow" onclick="contacto()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
-									<h1>
-										<i class="fas fa-comments"></i>
-									</h1>
-									<h3 class="card-title">
-										<b>
-											Contáctanos
-										</b>
-									</h3>
-								</div>
-							</a>
+
+							<div class="card shadow" onclick="contacto()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+								<h1>
+									<i class="fas fa-comments"></i>
+								</h1>
+								<h3 class="card-title">
+									<b>
+										Contáctanos
+									</b>
+								</h3>
+							</div>
+
 						</div>
 						<div class="col-6">
-							<a class="link" href="BolsaMovil">
-								<div class="card shadow" onclick="bolsa()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
-									<h1>
-										<i class="fas fa-user-graduate"></i>
-									</h1>
-									<h3 class="card-title">
-										<b>
-											Reclutamiento
-										</b>
-									</h3>
-								</div>
-							</a>
+							<div class="card shadow" onclick="bolsa()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+								<h1>
+									<i class="fas fa-user-graduate"></i>
+								</h1>
+								<h3 class="card-title">
+									<b>
+										Reclutamiento
+									</b>
+								</h3>
+							</div>
+
 						</div>
 					</div>
 					<br>
