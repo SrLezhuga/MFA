@@ -101,7 +101,7 @@
 						<div class="col-6">
 							<div class="card shadow" onclick="bolsa()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 								<h1>
-									<i class="fas fa-user-graduate"></i>
+									<i class="fas fa-user-tie"></i>
 								</h1>
 								<h3 class="card-title">
 									<b>
