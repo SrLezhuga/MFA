@@ -81,6 +81,9 @@
 				<!-- Modal body -->
 				<div class="modal-body">
 					<div class="row">
+						<div class="col-12">
+							<img class="img-suc" src="assets/img/upload.gif" onerror="this.src='assets/img/upload.gif';" height="auto" width="100%">
+						</div>
 						<div class="col-12 text-left">
 							<p class="card-text"><b>Dirección:</b>
 								<br><a id="directorioModal"> </a>
@@ -120,7 +123,6 @@
 				success: function(data) {
 					var obj = JSON.parse(data);
 					if (obj.status == "ok") {
-
 						$("#tituloModal").html(obj.nombre_sucursal);
 						$("#directorioModal").html(obj.direccion);
 						$("#coloniaModal").html(obj.colonia);
@@ -132,6 +134,8 @@
 						$(".telefonoModal").attr("href", "tel:'" + obj.telefono + "'");
 						$(".mapaModal").attr("src", "https://www.google.com/maps/embed?pb=" + obj.mapa);
 						$(".mapacelModal").attr("href", "https://www.google.com/maps/place/" + obj.mapa_cel);
+						$(".img-suc").attr("src", "assets/img/" + obj.sucursal + "/" + obj.img);
+
 						$('#ModalSucursales').modal({
 							show: true
 						});
