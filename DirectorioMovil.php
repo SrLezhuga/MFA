@@ -26,8 +26,8 @@
 
 							<div class="row">
 								<div class="col-12">
-									<h1><b>Horarios de Servicio</b> <i class="far fa-clock"></i></h1>
-									<h5>Lunes a Viernes 8:30 AM - 6:30 PM<br>Sabados 8:30 AM - 2:00 PM</h5>
+									<h2><b>Horarios de Servicio</b> <i class="far fa-clock"></i></h2>
+									<h6>Lunes a Viernes 8:30 AM - 6:30 PM<br>Sabados 8:30 AM - 2:00 PM</h6>
 								</div>
 							</div>
 
