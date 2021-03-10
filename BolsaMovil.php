@@ -44,7 +44,39 @@
 						';
 						}
 						?>
-
+						<div class="col-12">
+							<div class="card shadow" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+								<h1>
+									<b> Informes</b>
+								</h1>
+							</div>
+						</div>
+						<br>
+						<div class="col-6">
+							<div class="card shadow" onclick="reclutador1()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+								<h1>
+									<i class="fas fa-user"></i>
+								</h1>
+								<h3 class="card-title">
+									<b>
+										Lic. Carlos Grajeda
+									</b>
+								</h3>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="card shadow" onclick="reclutador2()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+								<h1>
+									<i class="fas fa-user"></i>
+								</h1>
+								<h3 class="card-title">
+									<b>
+										Lic. Stephany Lopez
+									</b>
+								</h3>
+							</div>
+						</div>
+						<br>
 					</div>
 					<br>
 				</div>
@@ -87,10 +119,90 @@
 						<br>
 						<div class="col-12">
 							<center>
-								<button type="button" class="btn btn-outline-danger mt-2 BtnVacante" data-toggle="modal" data-target="#modalVacante" value="">
-									<i class="far fa-thumbs-up"></i> Postularme
-								</button>
+								<a href="Bolsa" class="btn btn-outline-danger mt-2" role="button"><i class="far fa-thumbs-up"></i> Postularme en la Web</a>
 							</center>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- The Modal -->
+	<div class="modal fade" id="ModalReclutador1">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title"><b>Lic. Carlos Grajeda</b></h4>
+					<button type="button" class="close" data-dismiss="modal">×</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-12 text-left">
+							<p class="card-text"><b>Datos de contacto:</b>
+								<br><a href="mailto:karlos@mayoreoferreteroatlas.com"><i class="far fa-envelope"></i> karlos@mayoreoferreteroatlas.com</a>
+								<br><a href="tel:3318898437"><i class="fas fa-mobile-alt"></i> 33 1889 8437</a>
+							</p>
+						</div>
+						<div class="col-12 text-left">
+							<p class="card-text"><b>Whatsapp:</b></p>
+							<center>
+								<a href="https://wa.me/523318898437?text=Quiero%20ser%20parte%20del%20equipo!" target="_blank" class="btn btn-outline-success mt-2" role="button"><i class="fab fa-whatsapp"></i> Informes</a>
+							</center>
+
+						</div>
+						<div class="col-12 text-left">
+							<p class="card-text"><b>Facebooks:</b></p>
+							<center>
+								<a href="https://www.messenger.com/t/100040982919290/" target="_blank" class="btn btn-outline-primary mt-2 " role="button"><i class="fab fa-facebook-square"></i> RH Ferretero</a>
+								<a href="https://www.messenger.com/t/100055884110792/" target="_blank" class="btn btn-outline-primary mt-2 " role="button"><i class="fab fa-facebook-square"></i> Atlas Tools</a>
+							</center>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- The Modal -->
+	<div class="modal fade" id="ModalReclutador2">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title"><b>Lic. Stephany Lopez</b></h4>
+					<button type="button" class="close" data-dismiss="modal">×</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-12 text-left">
+							<p class="card-text"><b>Datos de contacto:</b>
+								<br><a href="mailto:fany@mayoreoferreteroatlas.com"><i class="far fa-envelope"></i> fany@mayoreoferreteroatlas.com</a>
+								<br><a href="tel:33 2972 4073"><i class="fas fa-mobile-alt"></i> 33 2972 4073</a>
+							</p>
+						</div>
+						<div class="col-12 text-left">
+							<p class="card-text"><b>Whatsapp:</b></p>
+							<center>
+								<a href="https://wa.me/523329724073?text=Quiero%20ser%20parte%20del%20equipo!" target="_blank" class="btn btn-outline-success mt-2" role="button"><i class="fab fa-whatsapp"></i> Informes</a>
+							</center>
+
+						</div>
+						<div class="col-12 text-left">
+							<p class="card-text"><b>Facebooks:</b></p>
+							<center>
+								<a href="https://www.messenger.com/t/100040982919290/" target="_blank" class="btn btn-outline-primary mt-2 " role="button"><i class="fab fa-facebook-square"></i> RH Ferretero</a>
+								<a href="https://www.messenger.com/t/100055884110792/" target="_blank" class="btn btn-outline-primary mt-2 " role="button"><i class="fab fa-facebook-square"></i> Atlas Tools</a>
+							</center>
+
 						</div>
 					</div>
 				</div>
@@ -124,7 +236,6 @@
 						$("#ofrecemosModal").html(nl2br(obj.ofrecemos));
 
 						$(".img-vacante").attr("src", "assets/img/vacantes/" + obj.img);
-						$(".BtnVacante").attr("value", obj.Id);
 
 						$('#ModalSucursales').modal({
 							show: true
@@ -137,9 +248,13 @@
 
 		}
 
-		$(document).ready(function() {
-			$('[data-toggle="tooltip"]').tooltip();
-		});
+		function reclutador1() {
+			$("#ModalReclutador1").modal("toggle");
+		}
+
+		function reclutador2() {
+			$("#ModalReclutador2").modal("toggle");
+		}
 	</script>
 
 	<div class="plus-button"></div>
@@ -156,29 +271,3 @@
 </body>
 
 </html>
-
-<!-- The Modal -->
-<div class="modal fade" id="modalVacante">
-	<div class="modal-dialog modal-sm">
-		<div class="modal-content border-left-danger shadow">
-			<div class="getVacante"></div>
-		</div>
-	</div>
-</div>
-
-<script type="text/javascript">
-	// Modal tarjeta Orden
-
-	$('.BtnVacante').on('click', function() {
-		var id_button = $(this).val();
-		$('.getVacante').load('./assets/controler/vacante/getvacante.php?id=' + id_button, function() {
-			$('#modalVacante').modal({
-				show: true
-			});
-		});
-	});
-
-	$(document).ready(function() {
-		$('[data-toggle="tooltip"]').tooltip();
-	});
-</script>
