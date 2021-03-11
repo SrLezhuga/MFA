@@ -23,7 +23,7 @@
 
 					<div class="row">
 						<div class="col-6">
-							<a href="tel:">
+							<a href="tel:3320407985">
 								<div class="card shadow" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-headset"></i>
