@@ -48,7 +48,7 @@
 						<a href="tel:' . $telefono . '">
 							<div class="card shadow" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 								<h1>
-									<i class="fas fa-phone-alt"></i>
+									<i class="fas fa-headset"></i>
 								</h1>
 								<h3 class="card-title" >
 									<b>
