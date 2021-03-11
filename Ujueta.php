@@ -157,7 +157,7 @@ $Web = mysqli_fetch_array($rsWeb);
 									"pageDots": true}'>
 
 										<?php
-										$queryCatalogo = "SELECT * FROM tab_catalogo WHERE Sucursal ='Atlas'";
+										$queryCatalogo = "SELECT * FROM tab_catalogo WHERE Sucursal ='Soldaduras'";
 										$rsCatalogo = mysqli_query($con, $queryCatalogo) or die("Error de consulta");
 										while ($Catalogo = mysqli_fetch_array($rsCatalogo)) {
 											echo '

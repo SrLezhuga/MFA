@@ -566,7 +566,7 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 }
 
 .top-content h1 {
-    padding-top: 60px;
+    /* padding-top: 60px;*/
     color: #fff;
 }
 
