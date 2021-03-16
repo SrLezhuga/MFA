@@ -8,16 +8,7 @@
 </head>
 
 <body>
-	<script src="assets/js/loader.js"></script>
 
-	<!-- Loader -->
-	<div class="lds-ring loader-in" id="loader">
-		<img border="0" class="mx-auto d-block" alt="Mayoreo Ferretero" src="assets/img/logo/logo.png" width="100px" height="100px" ;>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-	</div>
 	<!-- Wrapper -->
 	<div class="wrapper">
 		<!-- Content -->
