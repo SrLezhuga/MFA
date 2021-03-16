@@ -51,7 +51,7 @@
 							</div>
 						</div>
 						<div class="col-6">
-							<a class="link" href="DirectorioMovil">
+							<a class="link" href="DirectorioMovil" target="_blank">
 								<div class="card shadow" onclick="sucursal()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-store"></i>
@@ -65,44 +65,46 @@
 							</a>
 						</div>
 						<div class="col-6">
-							<div class="card shadow" onclick="catalogo()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
-								<h1>
-									<i class="fas fa-book-open"></i>
-								</h1>
-								<h3 class="card-title">
-									<b>
-										Catálogos
-									</b>
-								</h3>
-							</div>
-
+							<a class="link" href="CatalogoMovil" target="_blank">
+								<div class="card shadow" onclick="catalogo()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+									<h1>
+										<i class="fas fa-book-open"></i>
+									</h1>
+									<h3 class="card-title">
+										<b>
+											Catálogos
+										</b>
+									</h3>
+								</div>
+							</a>
 						</div>
 						<div class="col-6">
-
-							<div class="card shadow" onclick="contacto()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
-								<h1>
-									<i class="fas fa-comments"></i>
-								</h1>
-								<h3 class="card-title">
-									<b>
-										Contáctanos
-									</b>
-								</h3>
-							</div>
-
+							<a class="link" href="ContactoMovil" target="_blank">
+								<div class="card shadow" onclick="contacto()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+									<h1>
+										<i class="fas fa-comments"></i>
+									</h1>
+									<h3 class="card-title">
+										<b>
+											Contáctanos
+										</b>
+									</h3>
+								</div>
+							</a>
 						</div>
 						<div class="col-6">
-							<div class="card shadow" onclick="bolsa()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
-								<h1>
-									<i class="fas fa-user-tie"></i>
-								</h1>
-								<h3 class="card-title">
-									<b>
-										Reclutamiento
-									</b>
-								</h3>
-							</div>
-
+							<a class="link" href="BolsaMovil" target="_blank">
+								<div class="card shadow" onclick="bolsa()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+									<h1>
+										<i class="fas fa-user-tie"></i>
+									</h1>
+									<h3 class="card-title">
+										<b>
+											Reclutamiento
+										</b>
+									</h3>
+								</div>
+							</a>
 						</div>
 					</div>
 					<br>
