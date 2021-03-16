@@ -25,7 +25,7 @@
 					</p>
 					<div class="row">
 						<div class="col-6">
-							<a class="link" href="www.mayoreoferreteroatlas.com/mfa/index" target="_blank">
+							<a class="link" href="https://mayoreoferreteroatlas.com/mfa/index" target="_blank">
 								<div class="card shadow" onclick="web()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-globe"></i>
@@ -51,7 +51,7 @@
 							</div>
 						</div>
 						<div class="col-6">
-							<a class="link" href="www.mayoreoferreteroatlas.com/mfa/DirectorioMovil" target="_blank">
+							<a class="link" href="https://mayoreoferreteroatlas.com/mfa/DirectorioMovil" target="_blank">
 								<div class="card shadow" onclick="sucursal()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-store"></i>
@@ -65,7 +65,7 @@
 							</a>
 						</div>
 						<div class="col-6">
-							<a class="link" href="www.mayoreoferreteroatlas.com/mfa/CatalogoMovil" target="_blank">
+							<a class="link" href="https://mayoreoferreteroatlas.com/mfa/CatalogoMovil" target="_blank">
 								<div class="card shadow" onclick="catalogo()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-book-open"></i>
@@ -79,7 +79,7 @@
 							</a>
 						</div>
 						<div class="col-6">
-							<a class="link" href="www.mayoreoferreteroatlas.com/mfa/ContactoMovil" target="_blank">
+							<a class="link" href="https://mayoreoferreteroatlas.com/mfa/ContactoMovil" target="_blank">
 								<div class="card shadow" onclick="contacto()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-comments"></i>
@@ -93,7 +93,7 @@
 							</a>
 						</div>
 						<div class="col-6">
-							<a class="link" href="www.mayoreoferreteroatlas.com/mfa/BolsaMovil" target="_blank">
+							<a class="link" href="https://mayoreoferreteroatlas.com/mfa/BolsaMovil" target="_blank">
 								<div class="card shadow" onclick="bolsa()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-user-tie"></i>
