@@ -51,16 +51,18 @@
 							</div>
 						</div>
 						<div class="col-6">
-							<div class="card shadow" onclick="sucursal()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
-								<h1>
-									<i class="fas fa-store"></i>
-								</h1>
-								<h3 class="card-title">
-									<b>
-										Sucursales
-									</b>
-								</h3>
-							</div>
+							<a class="link" href="DirectorioMovil">
+								<div class="card shadow" onclick="sucursal()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+									<h1>
+										<i class="fas fa-store"></i>
+									</h1>
+									<h3 class="card-title">
+										<b>
+											Sucursales
+										</b>
+									</h3>
+								</div>
+							</a>
 						</div>
 						<div class="col-6">
 							<div class="card shadow" onclick="catalogo()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
