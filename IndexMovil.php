@@ -112,7 +112,7 @@
 			</div>
 		</div>
 	</div>
-	<footer id="footer-container">
+	<footer id="footer-container" style="bottom: 0; left: 0; position: absolute; width: 100%;">
 		<div class="copynote bg-dark text-white border border-right-0 border-bottom-0 border-left-0 " style="border-top: 5px solid #dc3545!important;">
 			<div class="container">
 				<div class="row">
