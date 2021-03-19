@@ -58,7 +58,7 @@
 						<div class="card-body">
 
 
-							<div class="row">
+							<div class="row hero">
 								<div class="col-lg-2 col-sm-12">
 									<a>
 										<img src="assets/img/logo/CARRITO-DE-COMPRAS.png" class="img-fluid mx-auto d-block logo-shop wow  slideInLeft">
@@ -66,7 +66,7 @@
 
 								</div>
 								<div class="col-lg-10 col-sm-12">
-									<h2 class="white wow  slideInRight">Visita nuestra tienda en linea!</h2>
+									<h2 class="white wow  slideInRight"><b>Visita nuestra tienda en linea!</b></h2>
 									<br>
 									<a href="https://mechanicshop.com.mx/" class="btn btn-outline-danger btn-block btn-lg wow  slideInRight" role="button">
 										<i class="fas fa-shopping-cart"></i> Ir a la tienda</a>

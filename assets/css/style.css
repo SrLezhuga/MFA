@@ -868,3 +868,24 @@ footer {
 .swal2-styled.swal2-confirm {
     background-color: #dc3545 !important;
 }
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    height: fit-content;
+}
+
+.hero::before {
+    content: "";
+    background-image: url(../img/bg.jpg);
+    background-size: contain;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.25;
+}
