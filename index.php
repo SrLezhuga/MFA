@@ -61,7 +61,7 @@
 							<div class="row">
 								<div class="col-lg-2 col-sm-12">
 									<a>
-										<img src="assets/img/logo/logo.png" class="img-fluid mx-auto d-block logo-shop wow  slideInLeft">
+										<img src="assets/img/logo/CARRITO-DE-COMPRAS.png" class="img-fluid mx-auto d-block logo-shop wow  slideInLeft">
 									</a>
 
 								</div>
