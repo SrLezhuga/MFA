@@ -25,7 +25,7 @@
 					<div class="row">
 						<div class="col-12">
 							<!-- Jumbotron -->
-							<div class="jumbotron jumbotron-fluid" style="background-color: #dc3545;">
+							<div class="jumbotron jumbotron-fluid" style="background-color: transparent;">
 								<div class="container">
 									<a>
 										<img src="assets/img/logo/logo.png" class="img-fluid mx-auto d-block logo-mfa">

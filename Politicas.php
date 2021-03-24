@@ -6,17 +6,8 @@
 	<?php include("assets/common/header.php"); ?>
 	<title>Mayoreo Ferretero | Nosotros</title>
 </head>
-<script src="assets/js/cookietool.js"></script>
-<script>
-	CookieTool.Config.set('link', 'cookies.html');
-	CookieTool.API.ask();
-</script>
-<link rel="stylesheet" href="assets/css/cookietool.css">
 
 <body>
-	<div class="cookietool-message cookietool-message-top">
-		<p>En este sitio se usan cookies para ofrecer una experiencia más personalizada. <a href="Cookies" target="_blank"><b>Más información</b></a>. ¿Aceptas usar cookies?</p><button type="button" class="btn btn-outline-danger" data-action="agree">Sí</button> <button type="button" class="btn btn-outline-danger" data-action="decline">No</button>
-	</div>
 
 	<?php print_r($_COOKIE); ?>
 	<!-- Wrapper -->
@@ -115,35 +106,6 @@
 
 	</div>
 	<!-- End wrapper -->
-
-	<script type="text/javascript">
-		$(function() {
-
-			//PDF
-			$('#imgPDF').change(function() {
-				var input = this;
-				var url = $(this).val();
-				var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
-				if (input.files && input.files[0] && ext == "pdf") {
-					$('.Img-PDF').attr('src', 'assets/img/ok.gif');
-					Swal.fire(
-						"Mensaje de confirmación",
-						"PDF cargado!!.",
-						"success"
-					);
-				} else {
-					$('.Img-PDF').attr('src', 'assets/img/pdf.gif');
-					$('#imgPDF').val('');
-					Swal.fire(
-						"Mensaje de confirmación",
-						"Error: Solo se admiten PDF",
-						"error"
-					);
-				}
-			});
-
-		});
-	</script>
 
 </body>
 
