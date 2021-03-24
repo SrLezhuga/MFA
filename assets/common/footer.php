@@ -11,7 +11,7 @@
                     </script> 
                     Mayoreo Ferretero. Todos los derechos Reservados.
                     <br>
-                    <a href="Politicas">Políticas</a> <a href="Cookies">Cookies</a>
+                    <a href="Politicas">Políticas</a>&nbsp;|&nbsp;<a href="Cookies">Cookies</a>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container -->
