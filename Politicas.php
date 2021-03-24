@@ -9,7 +9,6 @@
 
 <body>
 
-	<?php print_r($_COOKIE); ?>
 	<!-- Wrapper -->
 	<div class="wrapper">
 
