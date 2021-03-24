@@ -238,11 +238,15 @@
 					</div>
 					<div class="row">
 						<div class="col-md-6">
-							<img alt="App Store" src="assets/img/ios.png" class="store wow  slideInLeft">
+							<a data-toggle="tooltip" title="PROXIMAMENTE" data-placement="top">
+								<img alt="App Store" src="assets/img/ios.png" class="store wow  slideInLeft">
+							</a>
 						</div>
 						<br>
 						<div class="col-md-6">
-							<img alt="Play Store" src="assets/img/android.png" class="store wow  slideInRight">
+							<a href="https://play.google.com/store/apps/details?id=com.webmfa.movil" target="_blank"  data-toggle="tooltip" title="DESCARGAR" data-placement="top">
+								<img alt="Play Store" src="assets/img/android.png" class="store wow  slideInRight">
+							</a>
 						</div>
 					</div>
 				</div>
