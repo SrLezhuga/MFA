@@ -52,3 +52,14 @@
 <script src="assets/modulo/datatables/jquery.dataTables.min.js"></script>
 <script src="assets/modulo/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="assets/js/datatables-demo.js"></script>
+
+<!-- SCRIPT CONTROL DE COOKIES -->
+<script type="text/javascript">
+    function controlcookies() {
+        // si variable no existe se crea (al clicar en Aceptar)
+        localStorage.controlcookie = (localStorage.controlcookie || 0);
+
+        localStorage.controlcookie++; // incrementamos cuenta de la cookie
+        cookie1.style.display = 'none'; // Esconde la política de cookies
+    }
+</script>

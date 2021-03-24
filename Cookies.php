@@ -8,7 +8,6 @@
 </head>
 
 <body>
-
 	<!-- Wrapper -->
 	<div class="wrapper">
 
@@ -370,7 +369,7 @@
 									<h3 class="text-justify">
 										<b>CÓMO ELIMINAR LAS COOKIES DE LOS NAVEGADORES MÁS COMUNES</b>
 										<br>Puede bloquear las Cookies a través de las herramientas de configuración del navegador, o bien, puede configurar su navegador para que le avise cuando un servidor quiera guardar una Cookie:
-										<br>a) Si utiliza Microsoft Internet Explorer: 
+										<br>a) Si utiliza Microsoft Internet Explorer:
 										<br>&nbsp;&nbsp;<a href="http://windows.microsoft.com/es-es/windows7/how-to-manage-Cookies-in-internet-explorer-9">http://windows.microsoft.com/es-es/windows7/how-to-manage-Cookies-in-internet-explorer-9</a>
 										<br>b) Si utiliza Firefox:
 										<br>&nbsp;&nbsp;<a href="http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-Cookies-que-los-sitios-we">http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-Cookies-que-los-sitios-we</a>
