@@ -38,8 +38,8 @@ $Web = mysqli_fetch_array($rsWeb);
 									<a>
 										<img <?php echo 'src="assets/img/' . $Sucursal . '/' . $Web['Img_logo'] . '"'; ?> class="img-fluid mx-auto d-block logo-miilwaukee">
 									</a>
-									<h1 class="wow  slideInDown" style="visibility: visible; color: black; animation-name: slideInDown;"><b><?php echo $Web['Titulo']; ?></b></h1>
-									<p class="lead intro-text wow  slideInUp" style="visibility: visible; color: black; animation-name: slideInUp;"><?php echo $Web['Sub_titulo']; ?></p>
+									<h1 class="wow  slideInDown" style="visibility: visible; color: white; animation-name: slideInDown;"><b><?php echo $Web['Titulo']; ?></b></h1>
+									<p class="lead intro-text wow  slideInUp" style="visibility: visible; color: white; animation-name: slideInUp;"><?php echo $Web['Sub_titulo']; ?></p>
 								</div>
 							</div>
 
