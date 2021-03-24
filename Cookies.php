@@ -58,8 +58,8 @@
 										<br>
 										<br>Cookies utilizadas en nuestra web y la finalidad de las mismas.
 									</h3>
-									<table class="table table-bordered">
-										<thead>
+									<table class="table table-bordered table-responsive">
+										<thead class="thead-dark">
 											<tr>
 												<th>COOKIE</th>
 												<th>PROVEEDOR</th>
