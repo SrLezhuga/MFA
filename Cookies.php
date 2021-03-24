@@ -379,12 +379,18 @@
 									<h3 class="text-justify">
 										<b>CÓMO ELIMINAR LAS COOKIES DE LOS NAVEGADORES MÁS COMUNES</b>
 										<br>Puede bloquear las Cookies a través de las herramientas de configuración del navegador, o bien, puede configurar su navegador para que le avise cuando un servidor quiera guardar una Cookie:
-										<br>a) Si utiliza Microsoft Internet Explorer, <a href="http://windows.microsoft.com/es-es/windows7/how-to-manage-Cookies-in-internet-explorer-9">http://windows.microsoft.com/es-es/windows7/how-to-manage-Cookies-in-internet-explorer-9</a>
-										<br>b) Si utiliza Firefox, <a href="http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-Cookies-que-los-sitios-we">http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-Cookies-que-los-sitios-we</a>
-										<br>c) Si utiliza Chrome, <a href="https://support.google.com/accounts/answer/61416?hl=es">https://support.google.com/accounts/answer/61416?hl=es</a>
-										<br>d) Si utiliza Opera, <a href="http://help.opera.com/Windows/11.50/es-ES/cookies.html">http://help.opera.com/Windows/11.50/es-ES/cookies.html</a>
-										<br>e) Si utiliza Safari, <a href="http://support.apple.com/kb/HT1677?viewlocale=es_ES">http://support.apple.com/kb/HT1677?viewlocale=es_ES</a>
-										<br>f) Si utiliza Microsoft Edge, <a href="http://windows.microsoft.com/es-es/windows-vista/block-or-allow-Cookies">http://windows.microsoft.com/es-es/windows-vista/block-or-allow-Cookies</a>
+										<br>a) Si utiliza Microsoft Internet Explorer: 
+										<br>&nbsp;&nbsp;<a href="http://windows.microsoft.com/es-es/windows7/how-to-manage-Cookies-in-internet-explorer-9">http://windows.microsoft.com/es-es/windows7/how-to-manage-Cookies-in-internet-explorer-9</a>
+										<br>b) Si utiliza Firefox:
+										<br>&nbsp;&nbsp;<a href="http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-Cookies-que-los-sitios-we">http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-Cookies-que-los-sitios-we</a>
+										<br>c) Si utiliza Chrome:
+										<br>&nbsp;&nbsp;<a href="https://support.google.com/accounts/answer/61416?hl=es">https://support.google.com/accounts/answer/61416?hl=es</a>
+										<br>d) Si utiliza Opera:
+										<br>&nbsp;&nbsp;<a href="http://help.opera.com/Windows/11.50/es-ES/cookies.html">http://help.opera.com/Windows/11.50/es-ES/cookies.html</a>
+										<br>e) Si utiliza Safari:
+										<br>&nbsp;&nbsp;<a href="http://support.apple.com/kb/HT1677?viewlocale=es_ES">http://support.apple.com/kb/HT1677?viewlocale=es_ES</a>
+										<br>f) Si utiliza Microsoft Edge:
+										<br>&nbsp;&nbsp;<a href="http://windows.microsoft.com/es-es/windows-vista/block-or-allow-Cookies">http://windows.microsoft.com/es-es/windows-vista/block-or-allow-Cookies</a>
 									</h3>
 								</div>
 							</div>
