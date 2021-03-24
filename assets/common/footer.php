@@ -8,8 +8,11 @@
                     © <script>
                         var f = new Date();
                         document.write(f.getFullYear());
-                    </script> Mayoreo Ferretero.<br> Todos los derechos Reservados.
-                </div><!-- /.col-md-12 -->
+                    </script> 
+                    Mayoreo Ferretero. Todos los derechos Reservados.
+                    <br>
+                    <a href="Politicas">Políticas</a> <a href="Cookies">Cookies</a>
+                </div>
             </div><!-- /.row -->
         </div><!-- /.container -->
     </div><!-- /.copynote -->
