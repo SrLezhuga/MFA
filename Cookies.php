@@ -8,15 +8,6 @@
 </head>
 
 <body>
-	<script>
-		if (navigator.cookieEnabled == true) {
-			alert("El uso de cookies está activado");
-		} else {
-			alert("El uso de cookies está desactivado");
-		}
-		var misCookies = document.cookie;
-		document.write("COOKIES: [" + misCookies + "]");
-	</script>
 
 	<!-- Wrapper -->
 	<div class="wrapper">
