@@ -356,6 +356,36 @@
 											</tr>
 										</tbody>
 									</table>
+									<h3 class="text-justify">
+										<b>COOKIES DE TERCEROS</b>
+										<br>Los servicios de terceros son ajenos al control del editor. Los proveedores pueden modificar en todo momento sus condiciones de servicio, finalidad y utilización de las cookies, etc.
+										<br>Proveedores externos de este sitio web:
+										<br> ● Facebook <a href="https://www.facebook.com/about/privacy/">https://www.facebook.com/about/privacy/</a>
+										<br> ● Google Analytics <a href="https://privacy.google.com/take-control.html">https://privacy.google.com/take-control.html</a>
+										<br> ● Google <a href="https://privacy.google.com/take-control.html">https://privacy.google.com/take-control.html</a>
+										<br> ● Youtube <a href="https://www.youtube.com/intl/es/about/policies/#community-guidelines">https://www.youtube.com/intl/es/about/policies/#community-guidelines</a>
+									</h3>
+									<br>
+									<h3 class="text-justify">
+										<b>CÓMO GESTIONAR LAS COOKIES DESDE EL NAVEGADOR</b>
+										<br><b>Eliminar las cookies del dispositivo</b>
+										<br>Las cookies que ya están en un dispositivo se pueden eliminar borrando el historial del navegador, con lo que se suprimen las cookies de todos los sitios web visitados. Sin embargo, también se puede perder parte de la información guardada (por ejemplo, los datos de inicio de sesión o las preferencias de sitio web).
+										<br><b>Gestionar las cookies específicas del sitio</b>
+										<br>Para tener un control más preciso de las cookies específicas de cada sitio, los usuarios pueden ajustar su configuración de privacidad y cookies en el navegador.
+										<br><b>Bloquear las cookies</b>
+										<br>Aunque la mayoría de los navegadores modernos se pueden configurar para evitar que se instalen cookies en los dispositivos, eso puede obligar al ajuste manual de determinadas preferencias cada vez que se visite un sitio o página. Además, algunos servicios y características pueden no funcionar correctamente (por ejemplo, los inicios de sesión con perfil).
+									</h3>
+									<br>
+									<h3 class="text-justify">
+										<b>CÓMO ELIMINAR LAS COOKIES DE LOS NAVEGADORES MÁS COMUNES</b>
+										<br>Puede bloquear las Cookies a través de las herramientas de configuración del navegador, o bien, puede configurar su navegador para que le avise cuando un servidor quiera guardar una Cookie:
+										<br>a) Si utiliza Microsoft Internet Explorer, <a href="http://windows.microsoft.com/es-es/windows7/how-to-manage-Cookies-in-internet-explorer-9">http://windows.microsoft.com/es-es/windows7/how-to-manage-Cookies-in-internet-explorer-9</a>
+										<br>b) Si utiliza Firefox, <a href="http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-Cookies-que-los-sitios-we">http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-Cookies-que-los-sitios-we</a>
+										<br>c) Si utiliza Chrome, <a href="https://support.google.com/accounts/answer/61416?hl=es">https://support.google.com/accounts/answer/61416?hl=es</a>
+										<br>d) Si utiliza Opera, <a href="http://help.opera.com/Windows/11.50/es-ES/cookies.html">http://help.opera.com/Windows/11.50/es-ES/cookies.html</a>
+										<br>e) Si utiliza Safari, <a href="http://support.apple.com/kb/HT1677?viewlocale=es_ES">http://support.apple.com/kb/HT1677?viewlocale=es_ES</a>
+										<br>f) Si utiliza Microsoft Edge, <a href="http://windows.microsoft.com/es-es/windows-vista/block-or-allow-Cookies">http://windows.microsoft.com/es-es/windows-vista/block-or-allow-Cookies</a>
+									</h3>
 								</div>
 							</div>
 
