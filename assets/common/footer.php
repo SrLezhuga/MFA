@@ -9,9 +9,10 @@
                         var f = new Date();
                         document.write(f.getFullYear());
                     </script> 
-                    Mayoreo Ferretero. Todos los derechos Reservados.
+                    Mayoreo Ferretero. <br> Todos los derechos Reservados.
                     <br>
                     <a href="Politicas">Políticas</a>&nbsp;|&nbsp;<a href="Cookies">Cookies</a>
+                    <br>&nbsp;
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container -->

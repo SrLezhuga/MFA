@@ -74,9 +74,8 @@
 	<!--Código HTML de la política de cookies -->
 	<div class="cookiesms" id="cookie1">
 		Esta web utiliza cookies, puedes ver nuestra <a href="Cookies">la política de cookies, aquí</a>
-		Si continuas navegando estás aceptándola &nbsp;
-		<button type="button" class="btn btn-outline-danger" onclick="controlcookies()">Aceptar</button>
-		<div class="cookies2" onmouseover="document.getElementById('cookie1').style.bottom = '0px';">Política de cookies + </div>
+		Si continuas navegando estás aceptándola &nbsp; <a href="" onclick="controlcookies()">Aceptar</a>
+		<div class="cookies2" onmouseover="document.getElementById('cookie1').style.bottom = '0px';">Política de cookies <i class="fas fa-caret-down"></i> </div>
 	</div>
 	<script type="text/javascript">
 		if (localStorage.controlcookie > 0) {
