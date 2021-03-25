@@ -154,6 +154,66 @@
 		function bolsa() {
 			Android.showBolsa();
 		}
+
+		function suscripcion() {
+			var formData = new FormData();
+			var sus_nombre = $("#Sus_Nombre").val();
+			var sus_correo = $("#Sus_Correo").val();
+			var sus_telefono = $("#Sus_Telefono").val();
+
+			if ($('#Sus_Nombre').val().length == 0) {
+				Swal.fire(
+					"Mensaje de alerta",
+					"El campo nombre esta vacío.",
+					"error"
+				);
+				return false;
+			}
+			if ($("#Sus_Correo").val().indexOf('@', 0) == -1 || $("#Sus_Correo").val().indexOf('.', 0) == -1) {
+				Swal.fire(
+					"Mensaje de alerta",
+					"El correo electrónico introducido no es correcto.",
+					"error"
+				);
+				return false;
+			}
+			if ($('#Sus_Telefono').val().length != 10 || isNaN($('#Sus_Telefono').val())) {
+				Swal.fire(
+					"Mensaje de alerta",
+					"El número de teléfono debe tener al menos 10 números.",
+					"error"
+				);
+				return false;
+			}
+
+			formData.append("sus_nombre", sus_nombre);
+			formData.append("sus_correo", sus_correo);
+			formData.append("sus_telefono", sus_telefono);
+
+			$.ajax({
+				url: "assets/controler/movil/carga.php",
+				type: "post",
+				data: formData,
+				contentType: false,
+				processData: false,
+				success: function(data) {
+					var obj = JSON.parse(data);
+					if (obj.status == "ok") {
+						Swal.fire(
+							"Mensaje de confirmación",
+							obj.msg,
+							"success"
+						);
+					} else {
+						Swal.fire(
+							"Mensaje de alerta",
+							obj.msg,
+							"error"
+						);
+					}
+				}
+			});
+		}
 	</script>
 	<div class="plus-button"></div>
 
@@ -170,7 +230,7 @@
 
 <!-- The Modal -->
 <div class="modal fade" id="ModalPromociones">
-	<div class="modal-dialog modal-sm">
+	<div class="modal-dialog modal-sm modal-dialog-centered">
 		<div class="modal-content">
 
 			<!-- Modal Header -->
@@ -187,21 +247,21 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fas fa-user"></i></span>
 								</div>
-								<input type="text" class="form-control" placeholder="Nombre Completo">
+								<input type="text" class="form-control" placeholder="Nombre Completo" id="Sus_Nombre">
 							</div>
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fas fa-at"></i></span>
 								</div>
-								<input type="text" class="form-control" placeholder="Correo">
+								<input type="email" class="form-control" placeholder="Correo" id="Sus_Correo">
 							</div>
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
 								</div>
-								<input type="text" class="form-control" placeholder="Teléfono">
+								<input type="tel" class="form-control" placeholder="Teléfono/Whatsapp" id="Sus_Telefono">
 							</div>
-							<button type="button" class="btn btn-outline-danger">Suscribirse</button>
+							<button type="button" class="btn btn-outline-danger" onclick="suscripcion()">Suscribirse</button>
 							<button type="button" class="btn btn-outline-dark" data-dismiss="modal">Clancelar</button>
 						</form>
 					</div>
