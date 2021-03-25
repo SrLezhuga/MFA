@@ -25,7 +25,7 @@
 					</p>
 					<div class="row">
 						<div class="col-6">
-							<a class="link" href="index" >
+							<a class="link" href="index">
 								<div class="card shadow" onclick="web()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-globe"></i>
@@ -51,7 +51,7 @@
 							</div>
 						</div>
 						<div class="col-6">
-							<a class="link" href="DirectorioMovil" >
+							<a class="link" href="DirectorioMovil">
 								<div class="card shadow" onclick="sucursal()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-store"></i>
@@ -65,7 +65,7 @@
 							</a>
 						</div>
 						<div class="col-6">
-							<a class="link" href="CatalogoMovil" >
+							<a class="link" href="CatalogoMovil">
 								<div class="card shadow" onclick="catalogo()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-book-open"></i>
@@ -79,7 +79,7 @@
 							</a>
 						</div>
 						<div class="col-6">
-							<a class="link" href="ContactoMovil" >
+							<a class="link" href="ContactoMovil">
 								<div class="card shadow" onclick="contacto()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-comments"></i>
@@ -93,7 +93,7 @@
 							</a>
 						</div>
 						<div class="col-6">
-							<a class="link" href="BolsaMovil" >
+							<a class="link" href="BolsaMovil">
 								<div class="card shadow" onclick="bolsa()" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 									<h1>
 										<i class="fas fa-user-tie"></i>
@@ -167,48 +167,50 @@
 	}
 	?>
 </body>
+
 <!-- The Modal -->
-<div class="modal" id="ModalPromociones">
-	<div class="modal-dialog">
-		<!-- Modal content-->
-		<div class="modal-content" style="background-color: transparent;">
-			<button style="position: absolute; font-size: 30px; z-index: 2; right: 30px; top: 15px;" type="button" class="close" data-dismiss="modal">×</button>
+<div class="modal fade" id="ModalPromociones">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
 
-
-
-
-			<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
-				<div class="carousel-inner">
-					<?php
-					$queryModalPromocion = "SELECT * FROM tab_modal_promocion WHERE Status = 'true' ORDER BY Id_promocion DESC";
-					$rsModalPromocion = mysqli_query($con, $queryModalPromocion) or die("Error de consulta");
-					while ($ModalPromocion = mysqli_fetch_array($rsModalPromocion)) {
-						if ($ModalPromocion['Id_promocion'] == 1) {
-							$active = "active";
-						} else {
-							$active = "";
-						}
-						echo '
-									<div class="carousel-item ' . $active . ' data-interval="2000" ">
-										<a href="' . $ModalPromocion['Url'] . '">
-											<img src="assets/img/promocion/' . $ModalPromocion['Imagen_url'] . '" style="width:100%; border-radius: 15px;">
-										</a>
-									</div>
-									';
-					}
-					?>
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<div class="row">
+					<div class="col-12">
+						<h4 class="modal-title"><b>Suscribete a nuestras promociones</b></h4>
+						<button style="right: 15px; top: 0; position: absolute;" type="button" class="close" data-dismiss="modal">&times;</button>
+						<br>
+					</div>
+					<div class="col-12">
+						<form>
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-user"></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="Nombre Completo">
+							</div>
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-at"></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="Correo">
+							</div>
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="Teléfono">
+							</div>
+							<button type="button" class="btn btn-outline-danger">Suscribirse</button>
+							<button type="button" class="btn btn-outline-dark" data-dismiss="modal">Clancelar</button>
+						</form>
+					</div>
 				</div>
-				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
 			</div>
+
 		</div>
 	</div>
 </div>
+
 
 </html>
