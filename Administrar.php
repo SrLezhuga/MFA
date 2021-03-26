@@ -1,10 +1,10 @@
 <?php include("assets/controler/conexion.php"); 
-session_start();
+/*session_start();
 if (isset($_SESSION['priv_user']) && $_SESSION['priv_user']=="Admin") {
     # code...
 }else {
     header("Location: https://mayoreoferreteroatlas.com/mfa/500");
-}
+}*/
 ?>
 <!doctype html>
 <html lang="es">
@@ -60,6 +60,9 @@ if (isset($_SESSION['priv_user']) && $_SESSION['priv_user']=="Admin") {
 							<li class="nav-item">
 								<a class="nav-link" id="Marcas-tab" data-toggle="tab" href="#Marcas" role="tab" aria-controls="Marcas" aria-selected="false">Marcas</a>
 							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="Suscripcion-tab" data-toggle="tab" href="#Suscripcion" role="tab" aria-controls="Suscripcion" aria-selected="false">Suscripcion</a>
+							</li>
 						</ul>
 					</div>
 					<!-- /.col-md-4 -->
@@ -104,6 +107,10 @@ if (isset($_SESSION['priv_user']) && $_SESSION['priv_user']=="Admin") {
 							<div class="tab-pane fade" id="Marcas" role="tabpanel" aria-labelledby="Marcas-tab">
 								<!-- Marcas -->
 								<?php include("assets/controler/marca/config.php");  ?>
+							</div>
+							<div class="tab-pane fade" id="Suscripcion" role="tabpanel" aria-labelledby="Suscripcion-tab">
+								<!-- Suscripcion -->
+								<?php include("assets/controler/suscripcion/config.php");  ?>
 							</div>
 						</div>
 					</div>
