@@ -1,10 +1,10 @@
 <?php include("assets/controler/conexion.php"); 
-/*session_start();
+session_start();
 if (isset($_SESSION['priv_user']) && $_SESSION['priv_user']=="Admin") {
     # code...
 }else {
     header("Location: https://mayoreoferreteroatlas.com/mfa/500");
-}*/
+}
 ?>
 <!doctype html>
 <html lang="es">
