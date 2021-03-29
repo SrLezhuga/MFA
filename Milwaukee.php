@@ -371,7 +371,7 @@ $Web = mysqli_fetch_array($rsWeb);
 								<a href="<?php echo $Sucursal; ?>">
 									<h2>
 										<!-- replace with your brand logo/text -->
-										<center><img <?php echo 'src="assets/img/' . $Sucursal . '/' . $Web['Img_logo'] . '"'; ?> width="40%" alt="<?php echo $Sucursal; ?>" title="<?php echo $Sucursal; ?>" class="img-responsive">
+										<center><img <?php echo 'src="assets/img/' . $Sucursal . '/' . $Web['Img_logo-back'] . '"'; ?> width="40%" alt="<?php echo $Sucursal; ?>" title="<?php echo $Sucursal; ?>" class="img-responsive">
 											<center>
 											</center>
 										</center>
