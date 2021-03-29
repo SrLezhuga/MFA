@@ -1,9 +1,8 @@
 <?php include("assets/controler/conexion.php"); ?>
 <!-- open sidebar menu -->
-<a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+<div class="btn btn-danger btn-customized open-menu" style="top: 10px;">
     <i class="fas fa-bars"></i>
-</a>
-
+</div>
 
 <!-- Modal -->
 <div id="Creador" class="modal fade" role="dialog">
