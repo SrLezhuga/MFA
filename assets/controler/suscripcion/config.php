@@ -4,7 +4,7 @@
     <a href="assets/controler/exportar/excel.php" class="btn btn-outline-success" role="button"><i class="fas fa-file-excel"></i> Descargar Excel</a>
     <br><br>
 
-    <table class="table table-striped table-hover table-sm">
+    <table class="table table-hover table-sm" id="dataTableSuscripcion" width="100%" cellspacing="0" style="font: small-caption; text-transform: uppercase;">
         <thead class="thead-dark">
             <tr>
                 <th>Nombre</th>
@@ -19,11 +19,11 @@
             $rs = mysqli_query($con, $list) or die(mysqli_error($con));
             while ($item = mysqli_fetch_array($rs)) {
                 echo " 
-            <tr>
-                <td>" . $item['Nombre'] . "</td>
-                <td>" . $item['Correo'] . "</td>
-                <td>" . $item['Telefono'] . "</td>
-            </tr>";
+                        <tr>
+                            <td>" . $item['Nombre'] . "</td>
+                            <td>" . $item['Correo'] . "</td>
+                            <td>" . $item['Telefono'] . "</td>
+                        </tr>";
             }
             ?>
         </tbody>

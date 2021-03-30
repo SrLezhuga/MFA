@@ -58,294 +58,298 @@
 										<br>
 										<br>Cookies utilizadas en nuestra web y la finalidad de las mismas.
 									</h3>
-									<table class="table table-bordered table-responsive">
-										<thead class="thead-dark">
-											<tr>
-												<th>COOKIE</th>
-												<th>PROVEEDOR</th>
-												<th>DURACIÓN</th>
-												<th>DESCRIPCIÓN</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>DSID</td>
-												<td>doubleclick.net</td>
-												<td>15 dias</td>
-												<td>Google Adsense (DoubleClick): El uso de la cookie de DoubleClick permite a Google y a sus socios publicar anuncios basados en las visitas que los usuarios realizan en sus sitios o en otros sitios de Internet.</td>
-											</tr>
-											<tr>
-												<td>IDE</td>
-												<td>doubleclick.net</td>
-												<td>2 años</td>
-												<td>Google Adsense (DoubleClick): El uso de la cookie de DoubleClick permite a Google y a sus socios publicar anuncios basados en las visitas que los usuarios realizan en sus sitios o en otros sitios de Internet.</td>
-											</tr>
-											<tr>
-												<td>id</td>
-												<td>doubleclick.net</td>
-												<td>2 años</td>
-												<td>Google Adsense (DoubleClick): El uso de la cookie de DoubleClick permite a Google y a sus socios publicar anuncios basados en las visitas que los usuarios realizan en sus sitios o en otros sitios de Internet.</td>
-											</tr>
-											<tr>
-												<td>c_user</td>
-												<td>facebook.com</td>
-												<td>3 meses</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Esta cookie es usada por facebook y permite comprobar la id de usuario a los que le gusta la página sin estar logueado</td>
-											</tr>
-											<tr>
-												<td>csm</td>
-												<td>facebook.com</td>
-												<td>3 meses</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Necesario para el funcionamiento del botón “Like”. (Facebook)</td>
-											</tr>
-											<tr>
-												<td>datr</td>
-												<td>facebook.com</td>
-												<td>De sesión</td>
-												<td>Cookie (de terceros) –> Cookie del servicio social facebook.com</td>
-											</tr>
-											<tr>
-												<td>lu</td>
-												<td>facebook.com</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Cookie del servicio social facebook.com</td>
-											</tr>
-											<tr>
-												<td>s</td>
-												<td>facebook.com</td>
-												<td>1 año</td>
-												<td>Cookie (de terceros) –> Necesario para el funcionamiento del botón “Like”. Facebook</td>
-											</tr>
-											<tr>
-												<td>xs</td>
-												<td>facebook.com</td>
-												<td>1 año</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Necesario para el funcionamiento del botón “Like”.</td>
-											</tr>
-											<tr>
-												<td>dpr</td>
-												<td>facebook.com</td>
-												<td>1 año</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Cookie de sesión. Se aplica al acceder a nuestra página en Facebook. Permite interactuar con la red social desde nuestro portal.</td>
-											</tr>
-											<tr>
-												<td>fr</td>
-												<td>facebook.com</td>
-												<td>1 mes</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies son de Facebook, sirven para mostrar el botón “Me gusta” y mostrar el número de seguidores. Para más información</td>
-											</tr>
-											<tr>
-												<td>locale</td>
-												<td>facebook.com</td>
-												<td>1 semana</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Esta cookie contiene la configuración regional de visualización del último usuario que ha iniciado sesión en este navegador. Esta cookie parece establecerse solo después de que el usuario cierra sesión.</td>
-											</tr>
-											<tr>
-												<td>sb</td>
-												<td>facebook.com</td>
-												<td>1 mes</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies son de Facebook, sirven para mostrar el botón “Me gusta” y mostrar el número de seguidores. Para más información</td>
-											</tr>
-											<tr>
-												<td>spin</td>
-												<td>facebook.com</td>
-												<td>3 meses</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Esta cookie permite ajustar la publicidad del usuario según sus preferencias.</td>
-											</tr>
-											<tr>
-												<td>_gat_gtag_UA_30136587_4</td>
-												<td>fontawesome.com</td>
-												<td>2 horas</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Font Awesome recopila datos sobre qué archivos de iconos se muestran y cuándo. Si está interesado en cómo utilizan los datos, visite la sección en Política de privacidad de Font Awesome con respecto a estos datos.</td>
-											</tr>
-											<tr>
-												<td>1P_JAR</td>
-												<td>google.com</td>
-												<td>1 mes</td>
-												<td>Cookie (de terceros) –> Esta cookie se utiliza para transferir datos a Google.</td>
-											</tr>
-											<tr>
-												<td>APISID</td>
-												<td>google.com</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estas cookies son utilizadas por Google para almacenar las preferencias del usuario y la información durante la visualización de las páginas con los mapas de Google en ellos.</td>
-											</tr>
-											<tr>
-												<td>CONSENT</td>
-												<td>google.com</td>
-												<td>20 años</td>
-												<td>Cookie (de terceros) –> Esta cookie permite personalizar cómo se ven anuncios fuera de Google o almacenar información como el idioma preferido a la hora de mostrar resultados de búsqueda.</td>
-											</tr>
-											<tr>
-												<td>DV</td>
-												<td>google.com</td>
-												<td>1 hora</td>
-												<td>Cookie (de terceros) –> Esta cookie se genera con el fin de mostrar al usuario publicidad que según las preferencias de su sesión activa.Esta cookie se genera con el fin de mostrar al usuario publicidad que según las preferencias de su sesión activa.</td>
-											</tr>
-											<tr>
-												<td>NID</td>
-												<td>google.com</td>
-												<td>6 meses</td>
-												<td>Cookie (de terceros) –> Esta cookie contiene un ID único que Google utiliza para recordar tus preferencias y otra información, como tu idioma, el número de resultados que quieres que se muestre por página y si quieres que el filtro de SafeSearch de Google esté activado o desactivado.</td>
-											</tr>
-											<tr>
-												<td>_GRECAPTCHA</td>
-												<td>google.com</td>
-												<td>1 mes</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Google establece esta cookie. Además de ciertas cookies estándar de Google, reCAPTCHA establece una cookie necesaria cuando se ejecuta con el fin de proporcionar su análisis de riesgos.</td>
-											</tr>
-											<tr>
-												<td>__Secure-3PSIDCC</td>
-												<td>google.com</td>
-												<td>1 años</td>
-												<td>Cookie (de terceros) –> Crea un perfil de los intereses de los visitantes del sitio web para mostrar anuncios relevantes y personalizados a través del retargeting.</td>
-											</tr>
-											<tr>
-												<td>__Secure-3PAPISID</td>
-												<td>google.com</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Crea un perfil de los intereses de los visitantes del sitio web para mostrar anuncios relevantes y personalizados a través del retargeting.</td>
-											</tr>
-											<tr>
-												<td>__Secure-3PSID</td>
-												<td>google.com</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Crea un perfil de los intereses de los visitantes del sitio web para mostrar anuncios relevantes y personalizados a través del retargeting.</td>
-											</tr>
-											<tr>
-												<td>APISID </td>
-												<td>youtube.com</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
-											</tr>
-											<tr>
-												<td>CONSENT </td>
-												<td>youtube.com</td>
-												<td>26 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
-											</tr>
-											<tr>
-												<td>HSID </td>
-												<td>youtube.com</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
-											</tr>
-											<tr>
-												<td>LOGIN_INFO </td>
-												<td>youtube.com</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
-											</tr>
-											<tr>
-												<td>PREF </td>
-												<td>youtube.com</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
-											</tr>
-											<tr>
-												<td>SAPISID </td>
-												<td>youtube.com</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
-											</tr>
-											<tr>
-												<td>SID </td>
-												<td>youtube.com</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
-											</tr>
-											<tr>
-												<td>SIDCC </td>
-												<td>youtube.com</td>
-												<td>1 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
-											</tr>
-											<tr>
-												<td>SSID </td>
-												<td>youtube.com</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
-											</tr>
-											<tr>
-												<td>VISITOR_INFO1_LIVE </td>
-												<td>youtube.com</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
-											</tr>
-											<tr>
-												<td>YSC </td>
-												<td>youtube.com</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
-											</tr>
-											<tr>
-												<td>__Secure-3PSIDCC</td>
-												<td>youtube.com</td>
-												<td>1 años</td>
-												<td>Cookie (de terceros) –> Crea un perfil de los intereses de los visitantes del sitio web para mostrar anuncios relevantes y personalizados a través del retargeting.</td>
-											</tr>
-											<tr>
-												<td>__Secure-3PAPISID</td>
-												<td>youtube.com</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Crea un perfil de los intereses de los visitantes del sitio web para mostrar anuncios relevantes y personalizados a través del retargeting.</td>
-											</tr>
-											<tr>
-												<td>__Secure-3PSID</td>
-												<td>youtube.com</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Crea un perfil de los intereses de los visitantes del sitio web para mostrar anuncios relevantes y personalizados a través del retargeting.</td>
-											</tr>
-											<tr>
-												<td>SAPISID</td>
-												<td>google.com (maps)</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Visualización de mapas mediante Google Maps.</td>
-											</tr>
-											<tr>
-												<td>HSID</td>
-												<td>google.com (maps)</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Visualización de mapas mediante Google Maps.</td>
-											</tr>
-											<tr>
-												<td>NID</td>
-												<td>google.com (maps)</td>
-												<td>6 meses</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Visualización de mapas mediante Google Maps.</td>
-											</tr>
-											<tr>
-												<td>PREF</td>
-												<td>google.com (maps)</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Visualización de mapas mediante Google Maps.</td>
-											</tr>
-											<tr>
-												<td>SAPISID</td>
-												<td>google.com (maps)</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Visualización de mapas mediante Google Maps.</td>
-											</tr>
-											<tr>
-												<td>SSID</td>
-												<td>google.com (maps)</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Visualización de mapas mediante Google Maps.</td>
-											</tr>
-											<tr>
-												<td>SID</td>
-												<td>google.com (maps)</td>
-												<td>2 años</td>
-												<td>Cookie (de terceros) –> Estrictamente necesaria. Visualización de mapas mediante Google Maps.</td>
-											</tr>
-											<tr>
-												<td>cpsession</td>
-												<td>mayoreoferreteroatlas.com</td>
-												<td>sesion</td>
-												<td>Cookie propia –> Estrictamente necesaria. Identificador asignado por el host.</td>
-											</tr>
-										</tbody>
-									</table>
+									<button class="btn btn-outline-dark btn-sm" data-toggle="collapse" data-target="#demo"><i class="fas fa-angle-down"></i> Mostrar Cookies <i class="fas fa-angle-down"></i></button>
+									<div id="demo" class="collapse">
+										<br>
+										<table class="table table-bordered table-responsive">
+											<thead class="thead-dark">
+												<tr>
+													<th>COOKIE</th>
+													<th>PROVEEDOR</th>
+													<th>DURACIÓN</th>
+													<th>DESCRIPCIÓN</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>DSID</td>
+													<td>doubleclick.net</td>
+													<td>15 dias</td>
+													<td>Google Adsense (DoubleClick): El uso de la cookie de DoubleClick permite a Google y a sus socios publicar anuncios basados en las visitas que los usuarios realizan en sus sitios o en otros sitios de Internet.</td>
+												</tr>
+												<tr>
+													<td>IDE</td>
+													<td>doubleclick.net</td>
+													<td>2 años</td>
+													<td>Google Adsense (DoubleClick): El uso de la cookie de DoubleClick permite a Google y a sus socios publicar anuncios basados en las visitas que los usuarios realizan en sus sitios o en otros sitios de Internet.</td>
+												</tr>
+												<tr>
+													<td>id</td>
+													<td>doubleclick.net</td>
+													<td>2 años</td>
+													<td>Google Adsense (DoubleClick): El uso de la cookie de DoubleClick permite a Google y a sus socios publicar anuncios basados en las visitas que los usuarios realizan en sus sitios o en otros sitios de Internet.</td>
+												</tr>
+												<tr>
+													<td>c_user</td>
+													<td>facebook.com</td>
+													<td>3 meses</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Esta cookie es usada por facebook y permite comprobar la id de usuario a los que le gusta la página sin estar logueado</td>
+												</tr>
+												<tr>
+													<td>csm</td>
+													<td>facebook.com</td>
+													<td>3 meses</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Necesario para el funcionamiento del botón “Like”. (Facebook)</td>
+												</tr>
+												<tr>
+													<td>datr</td>
+													<td>facebook.com</td>
+													<td>De sesión</td>
+													<td>Cookie (de terceros) –> Cookie del servicio social facebook.com</td>
+												</tr>
+												<tr>
+													<td>lu</td>
+													<td>facebook.com</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Cookie del servicio social facebook.com</td>
+												</tr>
+												<tr>
+													<td>s</td>
+													<td>facebook.com</td>
+													<td>1 año</td>
+													<td>Cookie (de terceros) –> Necesario para el funcionamiento del botón “Like”. Facebook</td>
+												</tr>
+												<tr>
+													<td>xs</td>
+													<td>facebook.com</td>
+													<td>1 año</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Necesario para el funcionamiento del botón “Like”.</td>
+												</tr>
+												<tr>
+													<td>dpr</td>
+													<td>facebook.com</td>
+													<td>1 año</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Cookie de sesión. Se aplica al acceder a nuestra página en Facebook. Permite interactuar con la red social desde nuestro portal.</td>
+												</tr>
+												<tr>
+													<td>fr</td>
+													<td>facebook.com</td>
+													<td>1 mes</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies son de Facebook, sirven para mostrar el botón “Me gusta” y mostrar el número de seguidores. Para más información</td>
+												</tr>
+												<tr>
+													<td>locale</td>
+													<td>facebook.com</td>
+													<td>1 semana</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Esta cookie contiene la configuración regional de visualización del último usuario que ha iniciado sesión en este navegador. Esta cookie parece establecerse solo después de que el usuario cierra sesión.</td>
+												</tr>
+												<tr>
+													<td>sb</td>
+													<td>facebook.com</td>
+													<td>1 mes</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies son de Facebook, sirven para mostrar el botón “Me gusta” y mostrar el número de seguidores. Para más información</td>
+												</tr>
+												<tr>
+													<td>spin</td>
+													<td>facebook.com</td>
+													<td>3 meses</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Esta cookie permite ajustar la publicidad del usuario según sus preferencias.</td>
+												</tr>
+												<tr>
+													<td>_gat_gtag_UA_30136587_4</td>
+													<td>fontawesome.com</td>
+													<td>2 horas</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Font Awesome recopila datos sobre qué archivos de iconos se muestran y cuándo. Si está interesado en cómo utilizan los datos, visite la sección en Política de privacidad de Font Awesome con respecto a estos datos.</td>
+												</tr>
+												<tr>
+													<td>1P_JAR</td>
+													<td>google.com</td>
+													<td>1 mes</td>
+													<td>Cookie (de terceros) –> Esta cookie se utiliza para transferir datos a Google.</td>
+												</tr>
+												<tr>
+													<td>APISID</td>
+													<td>google.com</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estas cookies son utilizadas por Google para almacenar las preferencias del usuario y la información durante la visualización de las páginas con los mapas de Google en ellos.</td>
+												</tr>
+												<tr>
+													<td>CONSENT</td>
+													<td>google.com</td>
+													<td>20 años</td>
+													<td>Cookie (de terceros) –> Esta cookie permite personalizar cómo se ven anuncios fuera de Google o almacenar información como el idioma preferido a la hora de mostrar resultados de búsqueda.</td>
+												</tr>
+												<tr>
+													<td>DV</td>
+													<td>google.com</td>
+													<td>1 hora</td>
+													<td>Cookie (de terceros) –> Esta cookie se genera con el fin de mostrar al usuario publicidad que según las preferencias de su sesión activa.Esta cookie se genera con el fin de mostrar al usuario publicidad que según las preferencias de su sesión activa.</td>
+												</tr>
+												<tr>
+													<td>NID</td>
+													<td>google.com</td>
+													<td>6 meses</td>
+													<td>Cookie (de terceros) –> Esta cookie contiene un ID único que Google utiliza para recordar tus preferencias y otra información, como tu idioma, el número de resultados que quieres que se muestre por página y si quieres que el filtro de SafeSearch de Google esté activado o desactivado.</td>
+												</tr>
+												<tr>
+													<td>_GRECAPTCHA</td>
+													<td>google.com</td>
+													<td>1 mes</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Google establece esta cookie. Además de ciertas cookies estándar de Google, reCAPTCHA establece una cookie necesaria cuando se ejecuta con el fin de proporcionar su análisis de riesgos.</td>
+												</tr>
+												<tr>
+													<td>__Secure-3PSIDCC</td>
+													<td>google.com</td>
+													<td>1 años</td>
+													<td>Cookie (de terceros) –> Crea un perfil de los intereses de los visitantes del sitio web para mostrar anuncios relevantes y personalizados a través del retargeting.</td>
+												</tr>
+												<tr>
+													<td>__Secure-3PAPISID</td>
+													<td>google.com</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Crea un perfil de los intereses de los visitantes del sitio web para mostrar anuncios relevantes y personalizados a través del retargeting.</td>
+												</tr>
+												<tr>
+													<td>__Secure-3PSID</td>
+													<td>google.com</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Crea un perfil de los intereses de los visitantes del sitio web para mostrar anuncios relevantes y personalizados a través del retargeting.</td>
+												</tr>
+												<tr>
+													<td>APISID </td>
+													<td>youtube.com</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
+												</tr>
+												<tr>
+													<td>CONSENT </td>
+													<td>youtube.com</td>
+													<td>26 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
+												</tr>
+												<tr>
+													<td>HSID </td>
+													<td>youtube.com</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
+												</tr>
+												<tr>
+													<td>LOGIN_INFO </td>
+													<td>youtube.com</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
+												</tr>
+												<tr>
+													<td>PREF </td>
+													<td>youtube.com</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
+												</tr>
+												<tr>
+													<td>SAPISID </td>
+													<td>youtube.com</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
+												</tr>
+												<tr>
+													<td>SID </td>
+													<td>youtube.com</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
+												</tr>
+												<tr>
+													<td>SIDCC </td>
+													<td>youtube.com</td>
+													<td>1 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
+												</tr>
+												<tr>
+													<td>SSID </td>
+													<td>youtube.com</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
+												</tr>
+												<tr>
+													<td>VISITOR_INFO1_LIVE </td>
+													<td>youtube.com</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
+												</tr>
+												<tr>
+													<td>YSC </td>
+													<td>youtube.com</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Estas cookies se establecen a través de vídeos de Youtube incrustados. Registran datos estadísticos anónimos, por ejemplo, cuántas veces se muestra el vídeo y qué ajustes se utilizan para la reproducción. No se recopilan datos confidenciales a menos que inicies sesión.</td>
+												</tr>
+												<tr>
+													<td>__Secure-3PSIDCC</td>
+													<td>youtube.com</td>
+													<td>1 años</td>
+													<td>Cookie (de terceros) –> Crea un perfil de los intereses de los visitantes del sitio web para mostrar anuncios relevantes y personalizados a través del retargeting.</td>
+												</tr>
+												<tr>
+													<td>__Secure-3PAPISID</td>
+													<td>youtube.com</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Crea un perfil de los intereses de los visitantes del sitio web para mostrar anuncios relevantes y personalizados a través del retargeting.</td>
+												</tr>
+												<tr>
+													<td>__Secure-3PSID</td>
+													<td>youtube.com</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Crea un perfil de los intereses de los visitantes del sitio web para mostrar anuncios relevantes y personalizados a través del retargeting.</td>
+												</tr>
+												<tr>
+													<td>SAPISID</td>
+													<td>google.com (maps)</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Visualización de mapas mediante Google Maps.</td>
+												</tr>
+												<tr>
+													<td>HSID</td>
+													<td>google.com (maps)</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Visualización de mapas mediante Google Maps.</td>
+												</tr>
+												<tr>
+													<td>NID</td>
+													<td>google.com (maps)</td>
+													<td>6 meses</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Visualización de mapas mediante Google Maps.</td>
+												</tr>
+												<tr>
+													<td>PREF</td>
+													<td>google.com (maps)</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Visualización de mapas mediante Google Maps.</td>
+												</tr>
+												<tr>
+													<td>SAPISID</td>
+													<td>google.com (maps)</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Visualización de mapas mediante Google Maps.</td>
+												</tr>
+												<tr>
+													<td>SSID</td>
+													<td>google.com (maps)</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Visualización de mapas mediante Google Maps.</td>
+												</tr>
+												<tr>
+													<td>SID</td>
+													<td>google.com (maps)</td>
+													<td>2 años</td>
+													<td>Cookie (de terceros) –> Estrictamente necesaria. Visualización de mapas mediante Google Maps.</td>
+												</tr>
+												<tr>
+													<td>cpsession</td>
+													<td>mayoreoferreteroatlas.com</td>
+													<td>sesion</td>
+													<td>Cookie propia –> Estrictamente necesaria. Identificador asignado por el host.</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 									<h3 class="text-justify">
 										<b>COOKIES DE TERCEROS</b>
 										<br>Los servicios de terceros son ajenos al control del editor. Los proveedores pueden modificar en todo momento sus condiciones de servicio, finalidad y utilización de las cookies, etc.
