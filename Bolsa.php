@@ -182,7 +182,7 @@
 		<div class="social-button tiktok-button active" style="z-index: 88;">
 			<a data-toggle="tooltip" title="Tik Tok" data-placement="left" href="https://www.tiktok.com/@culturamfa" target="_blank"><i class="fab fa-tiktok"></i></a>
 		</div>
-		<div class="social-button telefono-button active" style="bottom: 150px; z-index: 89;">
+		<div class="social-button telefono-button active" style="bottom: 160px; z-index: 89;">
 			<a data-toggle="tooltip" title="Carlos Grajeda" data-placement="left" href="tel:3329724073"><i class="fas fa-phone-alt"></i></a>
 		</div>
 		<div class="social-button telefono-button active">

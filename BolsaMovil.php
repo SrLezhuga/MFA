@@ -14,15 +14,17 @@
 
 		<!-- Content -->
 		<div class="content">
-
-
-
+			<img src="assets/img/logo/logo.png" class="img-fluid mx-auto d-block" style="position: fixed; filter: opacity(0.2); left: 50%; top: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); padding: 0px 5px 0px 2px;;">
 			<!-- Section 1 -->
 			<div class="section-1-container " id="section-1">
 				<div class="container">
-
+					<div class="card shadow" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
+						<h1>
+							<b><i class="fas fa-user-tie"></i> Vacantes</b>
+						</h1>
+					</div>
+					<br>
 					<div class="row">
-
 						<?php
 						$queryBolsa = "SELECT Id, vacante FROM tab_vacantes WHERE visible = 'true' ORDER BY vacante ASC";
 						$rsBolsa = mysqli_query($con, $queryBolsa) or die("Error de consulta");
@@ -47,7 +49,7 @@
 						<div class="col-12">
 							<div class="card shadow" style="margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px;">
 								<h1>
-									<b> Informes</b>
+									<b><i class="fas fa-info"></i> Informes</b>
 								</h1>
 							</div>
 						</div>

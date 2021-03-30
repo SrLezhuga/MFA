@@ -14,27 +14,22 @@
 
 		<!-- Content -->
 		<div class="content">
-
-
-
+			<img src="assets/img/logo/logo.png" class="img-fluid mx-auto d-block" style="position: fixed; filter: opacity(0.2); left: 50%; top: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); padding: 0px 5px 0px 2px;;">
 			<!-- Section 1 -->
 			<div class="section-1-container " id="section-1">
 				<div class="container">
-
-					<div class="card bg-light text-dark shadow mb-3 mt-3">
-						<div class="card-body">
-
-							<div class="row">
-								<div class="col-12">
-									<h2><b>Horarios de Servicio</b> <i class="far fa-clock"></i></h2>
-									<h6>Lunes a Viernes 8:30 AM - 6:30 PM<br>Sabados 8:30 AM - 2:00 PM</h6>
-								</div>
-							</div>
-
-						</div>
+					<div class="card bg-light text-dark shadow mt-2">
+						<h1><i class="fas fa-store"></i><b> Directorio</b></h1>
 					</div>
+					<br>
 					<div class="row">
+						<div class="col-12">
+							<div class="card bg-light text-dark shadow mb-3 mt-3">
+								<h2><b>Horarios de Servicio</b> <i class="far fa-clock"></i></h2>
+								<h6 class="small">Lunes a Viernes 8:30 AM - 6:30 PM<br>Sabados 8:30 AM - 2:00 PM</h6>
 
+							</div>
+						</div>
 						<?php
 						$querySucursal = "SELECT nombre_sucursal FROM tab_sucursal ORDER BY nombre_sucursal DESC";
 						$rsSucursal = mysqli_query($con, $querySucursal) or die("Error de consulta");

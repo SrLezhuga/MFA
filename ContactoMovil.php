@@ -14,13 +14,14 @@
 
 		<!-- Content -->
 		<div class="content">
-
-
-
+			<img src="assets/img/logo/logo.png" class="img-fluid mx-auto d-block" style="position: fixed; filter: opacity(0.2); left: 50%; top: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); padding: 0px 5px 0px 2px;;">
 			<!-- Section 1 -->
 			<div class="section-1-container " id="section-1">
 				<div class="container">
-
+					<div class="card bg-light text-dark shadow mt-2">
+						<h1><i class="fas fa-phone-alt"></i><b> Contacto</b></h1>
+					</div>
+					<br>
 					<div class="row">
 						<div class="col-6">
 							<a href="tel:3320407985">
