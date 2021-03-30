@@ -354,6 +354,8 @@
 										<b>COOKIES DE TERCEROS</b>
 										<br>Los servicios de terceros son ajenos al control del editor. Los proveedores pueden modificar en todo momento sus condiciones de servicio, finalidad y utilización de las cookies, etc.
 										<br>Proveedores externos de este sitio web:
+									</h3>
+									<h3 class="text-left">
 										<br> ● Facebook <a href="https://www.facebook.com/about/privacy/">https://www.facebook.com/about/privacy/</a>
 										<br> ● Google Analytics <a href="https://privacy.google.com/take-control.html">https://privacy.google.com/take-control.html</a>
 										<br> ● Google <a href="https://privacy.google.com/take-control.html">https://privacy.google.com/take-control.html</a>
