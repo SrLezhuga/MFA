@@ -1522,3 +1522,25 @@ input[type=number] {
 
 
 /* Fin del CSS para cookies */
+
+.border-left-danger {
+    border-left: 0.25rem solid #e74a3b !important;
+}
+
+.card {
+    border-radius: 0.50rem !important;
+}
+
+.card-gif {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+}
+
+.display-2 {
+    line-height: .6 !important;
+}
+
+hr.recorte {
+    background-color: #fff;
+    border-top: 2px dashed #8c8b8b;
+}

@@ -18,8 +18,13 @@
 			<!-- Section 1 -->
 			<div class="section-1-container " id="section-1">
 				<div class="container">
-					<div class="card bg-light text-dark shadow mt-2 md-2">
-						<h1><i class="fas fa-book-open"></i><b> Catalogos</b></h1>
+					<div class="col-12 text-left" style="margin-top: 10px;">
+						<a value="Página anterior" onClick="history.go(-1);">
+							<div class="btn btn-outline-light text-dark btn-customized" style="top: 10px; left: 10px;">
+								<i class="fas fa-arrow-left"></i>
+							</div>
+						</a>
+						<h1 style="margin-top: 0; margin-bottom: 0;"><b>Catalogos</b></h1>
 					</div>
 					<br>
 					<div class="row">
@@ -74,19 +79,7 @@
 			<br>
 
 		</div>
-		<!-- End content -->
 
-		<div class="plus-button"></div>
-
-		<?php
-		$querySocial = "SELECT * FROM tab_social";
-		$rsSocial = mysqli_query($con, $querySocial) or die("Error de consulta");
-		while ($Social = mysqli_fetch_array($rsSocial)) {
-			echo '
-        <div class="social-button ' . $Social['red_social'] . '-button"><a data-toggle="tooltip" title="' . ucfirst($Social['red_social']) . '" data-placement="left" href="' . $Social['Url_social'] . '" target="_blank"><i class="fab fa-' . $Social['red_social'] . '"></i></a></div>
-    ';
-		}
-		?>
 </body>
 
 </html>
